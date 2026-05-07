@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>YourJourney</title>
+
+      <link rel="stylesheet" href="css/style.css">
+
+      <script src="js/script.js" defer></script> <!-- This is a newer method that helps run pages faster as js is loading at the same time. Putting the js link at the bottom of the body section was a popular option before, and is mainly used when there's no more than js files. -->
+      
+      <script src="https://kit.fontawesome.com/aa47f20784.js" crossorigin="anonymous"></script>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light+Two&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+
+  </head>
+
+
+  <body>
+      
+    <header class="top-nav">
+      <!-- LEFT side of navigation -->
+      <div class="nav-left">
+        <a href="index.html">
+          <img src="img/Nav/Compass focused.png" alt="YourJourney logo" class="logo">
+        </a>
+        <div class="brand-text">
+          <span class="company-name">YourJourney</span>
+          <span class="tagline">to well-being</span>
+        </div>
+      </div>
+
+      <!-- RIGHT side of navigation (single wrapper keeps everything together) -->
+      <div class="nav-right">
+        <!-- Menu (kept here so it lines up with icons on wide screens) -->
+        <nav class="Menu" id="Menu" hidden>
+          <a href="UnderstandingMentalHealth.html">Understanding Mental Health</a>
+          <a href="FindingHelp.html">Finding Help</a>
+          <a href="Community.html">Community</a>
+          <a href="WellnesAndCopingTools.html">Wellness & Coping Tools</a>
+          <a href="Contact.html">Contact</a>
+        </nav>
+
+        <!-- Search -->
+        <div class="search-container">
+          <i id="search-toggle" class="fa fa-search" aria-hidden="true"></i>
+        </div>
+
+        <!-- Language switcher -->
+        <button id="lang-toggle" class="icon-btn lang-btn" aria-label="Change language">
+          <span id="current-lang">FR</span>
+        </button>
+
+        <!-- Hamburger Menu -->
+        <button
+          id="hamburger"
+          class="icon-btn hamburger"
+          aria-label="Toggle navigation menu"
+          aria-controls="Menu"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+        <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Wellness and Daily Life</li>
+          </ol>
+        </nav>
+
+        <!-- Hero image -->
+        <figure class="hero-image-container">
+            <img src="img/Wellness.jpg" 
+                alt="An image showing a girl with a map looking at road directions." 
+                class="hero-image">
+            <figcaption class="hero-caption">
+                Image credit: https://www.health.harvard.edu/mindscape
+            </figcaption>
+        </figure>
+
+        <section class="page-description">
+            <h2 class="heading">Coping Skills</h2>
+            <p>
+                Life gets overwhelming sometimes — exams, jobs, social pressure, or just… everything at once. 
+                Learning how to regulate emotions helps prevent burnout and makes stressful moments easier to manage.
+            </p>
+        </section>
+
+<div class="accordion-container">
+        <!-- Useful apps -->
+        <section class="category-exp">
+          <button class="accordion">
+              <h2 class="category-heading">Useful Apps</h2>
+              <span class="arrow">▸</span>
+          </button>
+          <div class="panel">
+          <p class="category-text">
+            Try one of the apps below to help you in your daily challenges. All of the apps below have been assessed and approved by the Mental Health Commission of Canada.
+          </p>
+          <!-- MHCC App Grid -->
+            <div class="app-grid">
+
+          <!-- Breathr -->
+          <div class="app-card">
+            <img class="app-icon" src="img/breathr.png" alt="Breathr app icon">
+            <h3 class="app-title">Breathr</h3>
+            <p class="app-desc">
+              A free mindfulness and breathing app created with BC Children’s Hospital. Offers simple grounding exercises and short introductions to mindfulness, designed for youth and young adults.
+            </p>
+            <div class="store-buttons">
+              <a href="https://apps.apple.com/ca/app/breathr-mindful-moments/id1213963384"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="https://play.google.com/store/apps/details?id=ca.phsa.breathrapp&hl=en_CA"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- Embracing Life -->
+          <div class="app-card">
+            <img class="app-icon" src="img/embracinglife.png" alt="Embracing Life app icon">
+            <h3 class="app-title">Embracing Life</h3>
+            <p class="app-desc">
+              A suicide-prevention and hope-building app developed through a Canadian community program. Includes safety planning tools, reflection activities, and crisis-support features.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- JoyPop -->
+          <div class="app-card">
+            <img class="app-icon" src="img/joypop.png" alt="JoyPop app icon">
+            <h3 class="app-title">JoyPop</h3>
+            <p class="app-desc">
+              Developed by researchers at McMaster University, JoyPop trains emotional regulation using mood tracking, journaling, grounding tools, and coping exercises for youth.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- Mindwell -->
+          <div class="app-card">
+            <img class="app-icon" src="img/mindwell.png" alt="Mindwell app icon">
+            <h3 class="app-title">Mindwell</h3>
+            <p class="app-desc">
+              A Canadian mindfulness-based app offering short, evidence-informed exercises to reduce stress. Used across several provincial public-health initiatives.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- PTSD Family Coach -->
+          <div class="app-card">
+            <img class="app-icon" src="img/ptsd-family-coach.png" alt="PTSD Family Coach app icon">
+            <h3 class="app-title">PTSD Family Coach</h3>
+            <p class="app-desc">
+              A free resource for families supporting someone with PTSD. Includes education, coping tools, stress-reduction strategies, and guided exercises for caregivers.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- Rootd -->
+          <div class="app-card">
+            <img class="app-icon" src="img/rootd.png" alt="Rootd app icon">
+            <h3 class="app-title">Rootd</h3>
+            <p class="app-desc">
+              A panic-attack and anxiety tool featuring grounding exercises, learning modules, and a “Rootr” emergency button. Popular among Canadian youth.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- Strongest Families Institute App -->
+          <div class="app-card">
+            <img class="app-icon" src="img/sfi.png" alt="Strongest Families Institute app icon">
+            <h3 class="app-title">Strongest Families Institute App</h3>
+            <p class="app-desc">
+              A digital companion to Strongest Families’ evidence-based family programs. Supports skill-building, behaviour regulation, and stress-management strategies.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- Talking Stick -->
+          <div class="app-card">
+            <img class="app-icon" src="img/talkingstick.png" alt="Talking Stick app icon">
+            <h3 class="app-title">Talking Stick</h3>
+            <p class="app-desc">
+              Developed with Indigenous communities, this app offers anonymous, moderated peer support spaces for youth, rooted in culture-informed mental wellbeing.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- You, Me, Baby -->
+          <div class="app-card">
+            <img class="app-icon" src="img/youmebaby.png" alt="You Me Baby app icon">
+            <h3 class="app-title">You, Me, Baby</h3>
+            <p class="app-desc">
+              A mental-health support app for expectant and new parents. Includes stress-management tools, relationship support, and emotional wellbeing modules.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- MindShift CBT -->
+          <div class="app-card">
+            <img class="app-icon" src="img/mindshift.png" alt="MindShift CBT app icon">
+            <h3 class="app-title">MindShift CBT</h3>
+            <p class="app-desc">
+              Created by Anxiety Canada, MindShift is one of the most widely used free anxiety apps. Includes CBT-based tools for exposure, planning, thought work, and relaxation.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- MoodTools -->
+          <div class="app-card">
+            <img class="app-icon" src="img/moodtools.png" alt="MoodTools app icon">
+            <h3 class="app-title">MoodTools – Depression Aid</h3>
+            <p class="app-desc">
+              A free evidence-based depression app including a thought diary, activity planner, educational tools, and a built-in safety plan.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- PTSD Coach Canada -->
+          <div class="app-card">
+            <img class="app-icon" src="img/ptsdcoach.png" alt="PTSD Coach Canada app icon">
+            <h3 class="app-title">PTSD Coach Canada</h3>
+            <p class="app-desc">
+              Made for Canadian veterans and the general public, this app provides PTSD education, coping strategies, relaxation tools, and guidance on support options.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- Virtual Hope Box -->
+          <div class="app-card">
+            <img class="app-icon" src="img/virtualhopebox.png" alt="Virtual Hope Box app icon">
+            <h3 class="app-title">Virtual Hope Box</h3>
+            <p class="app-desc">
+              Designed to build hope and coping skills. Users can store personal photos, quotes, and exercises and access problem-solving and distraction activities.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- Calm -->
+          <div class="app-card">
+            <img class="app-icon" src="img/calm.png" alt="Calm app icon">
+            <h3 class="app-title">Calm (Free Version)</h3>
+            <p class="app-desc">
+              Offers a free set of guided meditations, breathing tools, and sleep content. The full version is subscription-based, but the free pack remains widely used.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- HealthyMinds -->
+          <div class="app-card">
+            <img class="app-icon" src="img/healthyminds.png" alt="HealthyMinds app icon">
+            <h3 class="app-title">HealthyMinds</h3>
+            <p class="app-desc">
+              A mental-health app created for college and university students. Includes stress-management strategies, mood tracking, and productivity tools.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- CanPlan -->
+          <div class="app-card">
+            <img class="app-icon" src="img/canplan.png" alt="CanPlan app icon">
+            <h3 class="app-title">CanPlan</h3>
+            <p class="app-desc">
+              A free cognitive support tool for planning and organizing daily tasks. Originally designed for individuals with acquired brain injury, but helpful for anyone managing complex routines.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+          <!-- ConnexGO -->
+          <div class="app-card">
+            <img class="app-icon" src="img/connexgo.png" alt="ConnexGO app icon">
+            <h3 class="app-title">ConnexGO</h3>
+            <p class="app-desc">
+              ConnexOntario’s official app providing free information on mental-health and substance-use services in Ontario, including search tools, hotlines, and geolocation.
+            </p>
+            <div class="store-buttons">
+              <a href="#"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play"></a>
+            </div>
+          </div>
+
+        </div>
+
+            <!-- end app-grid -->
+
+          </div>
+        </section>
+
+
+
+        <!-- Digital Wellness -->
+        <section class="category-exp">
+          <button class="accordion">
+                                <h2 class="category-heading">Digital Wellness</h2>
+                                <span class="arrow">▸</span>
+                            </button>
+                            <div class="panel">
+          <p class="category-text">
+            Your phone can be both a lifeline and a stressor. Learn how to use it intentionally.
+          </p>
+          <h3 class="category-text">Strategies for healthier screen time:</h3>
+          <ul class="category-text">
+            <li>Curate your feed — unfollow accounts that make you feel bad.</li>
+            <li>Use “Do Not Disturb” mode during homework or rest.</li>
+            <li>Notice how apps affect your mood — and give yourself permission to step back.</li>
+            <li>Keep bedtime tech-free — your sleep and mental clarity will thank you.</li>
+          </ul>
+          <p class="category-text">
+            Tip: Replace endless scrolling with one thing that recharges you — music, a walk, or texting a friend who really listens.
+          </p>
+          </div>
+        </section>
+
+        <!-- School, Work & Burnout -->
+        <section class="category-exp">
+          <button class="accordion">
+                                <h2 class="category-heading">School, Work, & Burnout</h2>
+                                <span class="arrow">▸</span>
+                            </button>
+                            <div class="panel">
+          <p class="category-text">
+            Between classes, jobs, and future plans, burnout can sneak up quickly. You don’t have to do everything at once — rest is productive too.
+          </p>
+          <h3 class="category-text">How to manage:</h3>
+          <ul class="category-text">
+            <li>Break tasks into smaller steps and celebrate each win.</li>
+            <li>Use planners or apps to manage time instead of keeping it all in your head.</li>
+            <li>Take short breaks — stretch, breathe, hydrate.</li>
+            <li>Talk to your teacher or manager if you’re overwhelmed; asking for support shows maturity, not weakness.</li>
+          </ul>
+          <p class="category-text">
+            You are allowed to slow down — your worth is not measured by productivity.
+          </p>
+          </div>
+        </section>
+
+
+        <!-- Building Healthy Relationships -->
+        <section class="category-exp">
+          <button class="accordion">
+                                <h2 class="category-heading">Building Healthy Relationships</h2>
+                                <span class="arrow">▸</span>
+                            </button>
+                            <div class="panel">
+          <p class="category-text">
+            Good relationships are key to mental health. Learn what support, respect, and communication look like in friendships, family, and dating.
+          </p>
+          <h3 class="category-text">Healthy relationships feel like:</h3>
+          <ul class="category-text">
+            <li>You can express yourself honestly without fear.</li>
+            <li>Boundaries are respected.</li>
+            <li>You both listen and make space for each other.</li>
+            <li>You feel safe, not drained.</li>
+          </ul>
+          <h3 class="category-text">If something feels off:</h3>
+          <ul class="category-text">
+            <li>Reach out for advice or talk to a counselor.</li>
+            <li>Learn the signs of toxic or unsafe behavior.</li>
+            <li>Remember that love, friendship, and care should never hurt.</li>
+          </ul>
+          <p class="category-text">
+            Healthy relationships start with self-respect — when you value yourself, you attract connections that value you too.
+          </p>
+          </div>
+        </section>
+
+
+        <!-- Sleep, Nutrition & Movement -->
+        <section class="category-exp">
+          <button class="accordion">
+                                <h2 class="category-heading">Sleep, Nutrition, & Movement</h2>
+                                <span class="arrow">▸</span>
+                            </button>
+                            <div class="panel">
+          <p class="category-text">
+            Taking care of your body supports your mind. When you’re exhausted or undernourished, your emotions can feel heavier.
+          </p>
+          <h3 class="category-text">Simple tips:</h3>
+          <ul class="category-text">
+            <li><strong>Sleep:</strong> Aim for 7–9 hours; try a bedtime routine that doesn’t involve scrolling.</li>
+            <li><strong>Nutrition:</strong> Eat regularly; include proteins and fresh foods for steady energy.</li>
+            <li><strong>Movement:</strong> Walk, dance, stretch, skate, or play sports — whatever feels fun, not forced.</li>
+          </ul>
+          <p class="category-text">
+            Focus on balance, not perfection. Listening to your body is part of self-respect.
+          </p>
+          </div>
+        </section>
+</div>
+        <button id="back-to-top" aria-label="Back to top">
+        ↑ North
+        </button>
+
+    </main>
+  <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- About / Brand -->
+            <div class="footer-brand">
+                <img src="img/Nav/Compass focused with background.png" alt="YourJourney logo" class="footer-logo">
+                <h2 class="company-name">YourJourney</h2>
+                <p class="footer-text">
+                    YourJourney is a government supported online platform that aims to serve all of Canadian youth in navigating the landscape of mental health resources available nationally and provincially. It's your one-stop platform to reach the information and help you need.
+                </p>
+            </div>
+
+            <!-- Contact / Social -->
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Email: <a href="Contact.html">Contact</a></p>
+                <p>Follow us:</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 YourJourney. All rights reserved.</p>
+        </div>
+    </footer>
+  </body>
+
+
+</html>

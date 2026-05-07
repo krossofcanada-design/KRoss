@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourJourney</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script.js" defer></script> <!-- This is a newer method that helps run pages faster as js is loading at the same time. Putting the js link at the bottom of the body section was a popular option before, and is mainly used when there's no more than js files. -->
+    
+    <script src="https://kit.fontawesome.com/aa47f20784.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light+Two&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+    <body>
+        
+        <header class="top-nav">
+                <!-- LEFT side of navigation -->
+<div class="nav-left">
+  <a href="index.html">
+    <img src="img/Nav/Compass focused.png" alt="YourJourney logo" class="logo">
+  </a>
+  <div class="brand-text">
+    <span class="company-name">YourJourney</span>
+    <span class="tagline">to well-being</span>
+  </div>
+</div>
+
+<!-- RIGHT side of navigation (single wrapper keeps everything together) -->
+<div class="nav-right">
+  <!-- Menu (kept here so it lines up with icons on wide screens) -->
+  <nav class="Menu" id="Menu" hidden>
+    <a href="UnderstandingMentalHealth.html">Understanding Mental Health</a>
+    <a href="FindingHelp.html">Finding Help</a>
+    <a href="Community.html">Community</a>
+    <a href="WellnesAndCopingTools.html">Wellness & Coping Tools</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+
+  <!-- Search -->
+  <div class="search-container">
+    <i id="search-toggle" class="fa fa-search" aria-hidden="true"></i>
+  </div>
+
+  <!-- Language switcher -->
+  <button id="lang-toggle" class="icon-btn lang-btn" aria-label="Change language">
+    <span id="current-lang">FR</span>
+  </button>
+
+  <!-- Hamburger Menu -->
+  <button
+    id="hamburger"
+    class="icon-btn hamburger"
+    aria-label="Toggle navigation menu"
+    aria-controls="Menu"
+    aria-expanded="false"
+  >
+    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+  </button>
+</div>
+        </header>
+
+        <!-- ==================== MAIN CONTENT ==================== -->
+        <main>
+
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Finding Help</li>
+               </ol>
+            </nav>
+
+            <!-- Hero image -->
+            <figure class="hero-image-container">
+                <img src="img/Finding Help.jpg" 
+                    alt="An image showing a girl with a map looking at road directions." 
+                    class="hero-image">
+                <figcaption class="hero-caption">
+                    Image credit: https://www.health.harvard.edu/mindscape
+                </figcaption>
+            </figure>
+
+
+
+        <!-- =================== FINDING HELP CATEGORIES =================== -->
+        
+            <!-- Crisis Lines & Urgent Help -->
+            
+            <section class="page-description">
+            <h2 class="heading"><mark>Crisis Lines & Urgent Help</mark></h2>
+                <p class="category-text">
+                If you or someone you know is in danger, can’t stay safe, or feels overwhelmed — you are not alone. Help is available 24/7, free, and confidential.
+                </p>
+
+                <h3 class="heading">Canada-wide Crisis Support:</h3>
+                <p class="category-text">
+                  <strong>Kids Help Phone:</strong>  
+                  Call <a href="tel:18006686868" aria-label="Call Kids Help Phone at 1-800-668-6868">1-800-668-6868</a>  
+                  or text <strong>CONNECT</strong> to  
+                  <a href="sms:686868" aria-label="Text CONNECT to 686868">686868</a>. For kids, teens and young adults from coast to coast.
+                </p>
+
+                <p class="category-text">
+                  <strong>9-8-8 Suicide Crisis Helpline:</strong>  
+                  Call or text <a href="tel:988" aria-label="Call 9 8 8 Suicide Crisis Helpline">9-8-8</a> — available Canada-wide.
+                </p>
+
+                <p class="category-text">
+                  <strong>If it’s an emergency:</strong>  
+                  Call <a href="tel:911" aria-label="Call 911 emergency services">911</a> or go to the nearest hospital emergency department.
+                </p>
+                
+                <p class="category-text">
+                  You deserve help right now — you don’t need to wait until things get worse.
+                </p>
+
+                
+            </section>
+
+
+            <!-- Where to Start -->
+            <div class="accordion-container">
+              <section class="category-exp">
+                <button class="accordion">
+                    <h2 class="category-heading">Where to start</h2>
+                    <span class="arrow">▸</span>
+                </button>
+                <div class="panel">
+                  <p class="category-text">
+                      It’s totally normal not to know where to begin. Reaching out can feel big, but you don’t have to have the “right words” — you just have to start talking.
+                  </p>
+
+              <h3 class="category-text">You can begin by:</h3>
+              <ul class="category-text">
+                  <li>Telling someone you trust — a friend, parent, teacher, coach, or elder: “Hey, I’ve been struggling lately. Can we talk?”</li>
+                  <li>Seeing a school counselor or campus mental health worker if you’re in high school, college, or university.</li>
+                  <li>Booking an appointment with a family doctor or nurse practitioner — they can connect you to local services.</li>
+                  <li>Exploring online support if you’re not ready for face-to-face conversations.</li>
+              </ul>
+
+              <p class="category-text">
+                  Tip: It’s okay to try a few different types of support before finding what feels right.
+              </p>
+              </div>
+              </section>
+
+            <!-- Online Resources -->
+            <section class="category-exp">
+              <button class="accordion">
+                <h2 class="category-heading">Online Resources</h2>
+                <span class="arrow">▸</span>
+              </button>
+                <div class="panel">
+                  <p class="category-text">
+                    Not everyone feels ready for counseling, and that’s okay — investigate these online resources to understand your possibilities and where to find the kind of help you need.
+                  </p>
+
+                  <h3 class="heading">Canada-wide:</h3>
+                <ul class="category-text">
+
+                  <li>
+                    <a href="https://kidshelpphone.ca" target="_blank"><strong>Kids Help Phone</strong></a>: 
+                    For kids, teens, and young adults from coast to coast. Crisis support, access to a counsellor, as well as skill-building tools.
+                  </li>
+
+                  <li>
+                    <a href="https://jack.org" target="_blank"><strong>Jack.org</strong></a>: 
+                    Youth-led mental health movement with chapters in most provinces and online talks and stories of recovery.
+                  </li>
+
+                  <li>
+                    <a href="https://cmha.ca" target="_blank"><strong>Canadian Mental Health Association (CMHA)</strong></a>: 
+                    National organization with provincial chapters. Go here if you want in-depth knowledge on mental health as well as an overview of how to build up a support team around you. This site also provides info on where to find help.
+                  </li>
+
+                  <li>
+                    <a href="https://ymhc.ngo" target="_blank"><strong>Youth Mental Health Canada (YMHC)</strong></a>: 
+                    Educator-based platform working to provide essential resources to schools, families, and health care professionals. Explore this site to see what is available through your school.
+                  </li>
+
+                  <li>
+                    <a href="https://camh.ca" target="_blank"><strong>Centre for Addiction and Mental Health (CAMH)</strong></a>: 
+                    National leader of research within mental health with mental health centres in Toronto. An in-depth website for when you have time and want to know about the newest research.
+                  </li>
+
+
+                    <h3 class="heading">By Province:</h3>
+
+                    
+
+
+                <h3 class="category-text">NB</h3>
+
+                <ul class="category-text">
+
+                  <li>
+                    <a href="https://www.iys-sij.ca/providers/new-brunswick-iys" target="_blank"><strong>Integrated Youth Services (IYS)</strong></a>:
+                    Cross-sector youth hubs for ages 12–25 that integrate mental health, physical health, 
+                    education support, peer programs, and family services. A collaboration between the 
+                    Government of New Brunswick and CMHA-NB.
+                  </li>
+
+                  <li>
+                    <a href="https://atlanticwellness.org/" target="_blank"><strong>Atlantic Wellness</strong></a>:
+                    Free, professional therapy for youth aged 12–21 with no limit on sessions. Available 
+                    both in-person and virtually, offering one of the province’s few low-barrier 
+                    mental-health services.
+                  </li>
+
+                  <li>
+                    <a href="https://bridgethegapp.ca/" target="_blank"><strong>Bridge the Gap</strong></a>:
+                    Low-barrier school-based and online mental health support helping youth connect with 
+                    appropriate community services.
+                  </li>
+
+                  <li>
+                    <a href="https://horizonnb.ca/services/addictions-mental-health/child-and-youth-services/child-and-youth-teams-integrated-service-delivery-isd/" target="_blank"><strong>Horizon Health – Child & Youth Mental Health Services</strong></a>:
+                    Multidisciplinary teams of psychologists, social workers, and nurses providing support 
+                    in clinics and directly within school environments.
+                  </li>
+
+                  <li>
+                    <a href="https://partnersforyouth.ca/programs/dots-nb/" target="_blank"><strong>Dots NB (Partners for Youth)</strong></a>:
+                    Youth-led programming and school campaigns aimed at reducing stigma around mental health.
+                  </li>
+
+                  <li>
+                    <a href="https://imprintyouth.ca/" target="_blank"><strong>Imprint Youth Association & ConneQT NB</strong></a>:
+                    Safe social spaces, counselling, and targeted support for LGBTQIA2S+ youth across the 
+                    province.
+                  </li>
+
+                  <li>
+                    <a href="https://harvesthouseatlantic.org/" target="_blank"><strong>Harvest House</strong></a>:
+                    Moncton-based organization offering individual counselling and peer-support programs.
+                  </li>
+
+                  <li>
+                    <a href="mailto:wellnessonwheels2025@gmail.com" target="_blank"><strong>Wellness on Wheels</strong></a>:
+                    A mobile initiative bringing curated mental health toolkits, workshops, and resources to Southeastern New Brunswick.
+                  </li>
+
+                </ul>
+
+              <p class="category-text">
+                Peer-to-peer support reminds you that healing happens in community, not isolation.
+              </p>
+
+              </div>
+
+            </section>
+
+            <!-- Find a Therapist or Clinic -->
+            <section class="category-exp">
+            <button class="accordion">
+                <h2 class="category-heading">Find a Therapist or Clinic</h2>
+                <span class="arrow">▸</span>
+            </button>
+            <div class="panel">
+                <p class="category-text">
+                Finding the right person to talk to can make a huge difference. This section helps you explore options across Canada.
+                </p>
+
+                <h3 class="category-text">By Province:</h3>
+
+                <h3 class="category-text">NB</h3>
+                
+            </div>
+            </section>
+
+        
+
+            <!-- Financial & Accessibility Supports -->
+            <section class="category-exp">
+            <button class="accordion">
+                <h2 class="category-heading">Financial & Accessibility Supports</h2>
+                <span class="arrow">▸</span>
+            </button>
+            <div class="panel">
+                <p class="category-text">
+                Getting help shouldn’t depend on money or location. This section makes access clear and transparent.
+                </p>
+
+                <h3 class="category-text">(By Province:)</h3>
+                
+
+                <p class="category-text">
+                Tip: Ask, “Is there a free or low-cost option for youth?” You’d be surprised how often the answer is yes.
+                </p>
+
+                <p class="category-text">
+                <strong>Key message:</strong> You deserve support that fits you — not the other way around. Getting help doesn’t mean you’re broken; it means you’re taking your well-being seriously.
+                </p>
+            </div>
+            </section>
+            </div>
+    </main>
+
+
+
+
+
+        <button id="back-to-top" aria-label="Back to top">
+        ↑ North
+        </button>
+
+        <!-- ==================== FOOTER ==================== -->
+        <footer class="site-footer">
+            <div class="footer-container">
+                <!-- About / Brand -->
+                <div class="footer-brand">
+                    <img src="img/Nav/Compass focused with background.png" alt="YourJourney logo" class="footer-logo">
+                    <h2 class="company-name">YourJourney</h2>
+                    <p class="footer-text">
+                        YourJourney is a government supported online platform that aims to serve all of Canadian youth in navigating the landscape of mental health resources available nationally and provincially. It's your one-stop platform to reach the information and help you need.
+                    </p>
+                </div>
+
+                <!-- Contact / Social -->
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="Contact.html">Contact</a></p>
+                    <p>Follow us:</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 YourJourney. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </body>
+</html>

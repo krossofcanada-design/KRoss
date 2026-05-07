@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourJourney</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script.js" defer></script> <!-- This is a newer method that helps run pages faster as js is loading at the same time. Putting the js link at the bottom of the body section was a popular option before, and is mainly used when there's no more than js files. -->
+    
+    <script src="https://kit.fontawesome.com/aa47f20784.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light+Two&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+    
+    <header class="top-nav">
+            <!-- LEFT side of navigation -->
+<div class="nav-left">
+  <a href="index.html">
+    <img src="img/Nav/Compass focused.png" alt="YourJourney logo" class="logo">
+  </a>
+  <div class="brand-text">
+    <span class="company-name">YourJourney</span>
+    <span class="tagline">to well-being</span>
+  </div>
+</div>
+
+<!-- RIGHT side of navigation (single wrapper keeps everything together) -->
+<div class="nav-right">
+  <!-- Menu (kept here so it lines up with icons on wide screens) -->
+  <nav class="Menu" id="Menu" hidden>
+    <a href="UnderstandingMentalHealth.html">Understanding Mental Health</a>
+    <a href="FindingHelp.html">Finding Help</a>
+    <a href="Community.html">Community</a>
+    <a href="WellnesAndCopingTools.html">Wellness & Coping Tools</a>
+    <a href="Contact.html">Contact</a>
+  </nav>
+
+  <!-- Search -->
+  <div class="search-container">
+    <i id="search-toggle" class="fa fa-search" aria-hidden="true"></i>
+  </div>
+
+  <!-- Language switcher -->
+  <button id="lang-toggle" class="icon-btn lang-btn" aria-label="Change language">
+    <span id="current-lang">FR</span>
+  </button>
+
+  <!-- Hamburger Menu -->
+  <button
+    id="hamburger"
+    class="icon-btn hamburger"
+    aria-label="Toggle navigation menu"
+    aria-controls="Menu"
+    aria-expanded="false"
+  >
+    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+  </button>
+</div>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+
+        <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Understanding Mental Health</li>
+        </ol>
+        </nav>
+
+        <!-- Hero image -->
+        <figure class="hero-image-container">
+            <img src="img/Understand.png" 
+                alt="An image showing that the mental life of a person, their logic and thinking patterns, varies, and that mental health is complex and looks different for every person." 
+                class="hero-image">
+            <figcaption class="hero-caption">
+                Image credit: https://students.usask.ca/articles/understanding-neurodiversity.php and AI, chatGPT
+            </figcaption>
+        </figure>
+
+        <!-- ==================== What Is Mental Health ==================== -->
+        <section class="page-description">
+        <h2 class="heading">What Is Mental Health?</h2>
+        <p>
+            Mental health isn’t just the absence of illness — it’s how you think, feel, and connect with others.
+            It includes your emotions, coping skills, and sense of purpose. Just like physical health, your
+            mental health can change over time depending on stress, sleep, relationships, food habits, and environment.
+        </p>
+        </section>
+
+
+
+        <!-- ==================== Common Conditions in Youth ==================== -->
+        <div class="accordion-container"> 
+          <section class="category-exp"> 
+            <button class="accordion"> 
+              <h2 class="category-heading">Common Conditions in Youth</h2> 
+              <span class="arrow">▸</span> 
+            </button> 
+            <div class="panel"> 
+              <p class="category-text"> Mental health challenges can affect anyone — and many start between the ages of 15 and 25, and even earlier. Knowing the basics can help you recognize what’s happening and find the right kind of help early. </p> 
+              <h3 class="category-text">Most common conditions:</h3> 
+              <ul> 
+                <li><strong>Anxiety:</strong> When worry becomes overwhelming or constant.</li> 
+                <li><strong>Depression:</strong> Feeling persistently sad, empty, or numb.</li> 
+                <li><strong>ADHD:</strong> Difficulty focusing, staying organized, or managing impulses.</li> 
+                <li><strong>Eating Disorders:</strong> When food, body image, or exercise become sources of stress.</li> 
+                <li><strong>Substance Use & Mental Health:</strong> Understanding how they can interact.</li> 
+                
+                <a href="PageUnderConstruction.html" class="category-button">Learn More</a> 
+              </ul> 
+            </div> 
+          </section> 
+        
+        <!-- Signs You Might Need Support --> 
+         <section class="category-exp"> 
+          <button class="accordion"> 
+            <h2 class="category-heading">Signs You Might Need Support</h2> 
+            <span class="arrow">▸</span> 
+          </button> 
+          <div class="panel"> 
+            <p class="category-text"> Everyone has ups and downs, but sometimes changes in mood, motivation, or focus can signal it’s time to talk to someone. Pay attention to patterns that last for a couple of weeks or start affecting school, work, or friendships. 
+            </p> 
+            <h3 class="category-text">You might notice:</h3> 
+            <ul class="category-text"> 
+              <li>- Feeling sad, empty, or anxious most of the time.</li> 
+              <li>- Trouble sleeping or sleeping too much.</li> 
+              <li>- Losing interest in things you used to enjoy.</li> 
+              <li>- Difficulty concentrating or remembering.</li> 
+              <li>- Feeling disconnected or hopeless.</li> 
+              <li>- Physical symptoms like headaches, stomach aches, or fatigue.</li> 
+            </ul> 
+            <p class="category-text"> Next step: It’s okay to start small — reach out to a friend, parent, or counselor and share how you’ve been feeling. Everyone needs support sometimes — it’s a normal part of life. </p> 
+            
+            <a href="FindingHelp.html" class="category-button">Finding Help</a> 
+          </div> 
+        </section> 
+      </div>
+
+
+
+    </main>
+
+    <button id="back-to-top" aria-label="Back to top">
+    ↑ North
+    </button>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- About / Brand -->
+        <div class="footer-brand">
+            <img src="img/Nav/Compass focused with background.png" alt="YourJourney logo" class="footer-logo">
+            <h2 class="company-name">YourJourney</h2>
+            <p class="footer-text">
+                YourJourney is a government supported online platform that aims to serve all of Canadian youth in navigating the landscape of mental health resources available nationally and provincially. It's your one-stop platform to reach the information and help you need.
+            </p>
+        </div>
+
+            <!-- Contact / Social -->
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p>Email: <a href="Contact.html">Contact</a></p>
+                <p>Follow us:</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 YourJourney. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+
+</html>

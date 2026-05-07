@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="da"> <!-- language selelct -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Naturlige hårplejeprodukter til mænd | Kystnær</title> <!-- Remember the title -->
+
+        <link rel="stylesheet" href="css/style.css"> <!-- Link to css file -->
+
+        <script src="js/script.js" defer></script> <!-- This is a newer method that helps run pages faster as js is loading at the same time. Putting the js link at the bottom of the body section was a popular option before, and is mainly used when js is more simple. -->
+        
+        <!-- Link to fontawesome, so we can use their icons -->
+        <script src="https://kit.fontawesome.com/aa47f20784.js" crossorigin="anonymous"></script>
+
+        <!-- Insert link to fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        
+
+    </head>
+
+    
+
+    <body>
+        <!-- HEADER -->
+        <header class="top-nav top-nav-haarpleje">
+
+            <!-- Left side of Navigation -->
+            <button class="hamburger-black" aria-label="Åbn menu">
+               <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <a href="index.html" class="logo-name">
+                <img class="logo logo-aqua-general" src="img/LOGO AQUA.png" alt="Kystnær logo">
+                <span class="company-name-general">Kystnær</span>
+            </a>
+
+
+            <!-- Desktop menu (shown on desktop only) -->
+            <nav class="desktop-menu">
+            <ul class="desktop-menu-list">
+                <li class="desktop-menu-item" data-open="shop">Shop</li>
+                <li class="desktop-menu-item">Serier</li>
+                <li class="desktop-menu-item">Forkælelsespakker</li>
+                <li class="desktop-menu-item">Brands</li>
+                <li class="desktop-menu-item">Om Kystnær</li>
+                <li class="desktop-menu-item">Blog og guides</li>
+                <li class="desktop-menu-item">Kontakt</li>
+            </ul>
+            </nav>
+
+            <!-- Right side of Navigation -->
+            <div class="nav-right-black">
+                <div>
+                    <i class="fa-solid fa-bag-shopping" aria-label="Indkøbskurv"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass" aria-label="Søgefunktion"></i>
+                </div>
+            </div>
+
+
+            
+
+        </header>
+
+            <!-- MEGA-PANEL -->
+
+            <!-- MEGA PANEL OVERLAY -->
+            <div class="menu-overlay" tabindex="-1"></div>
+
+            <!-- MEGA PANEL ROOT -->
+            <nav class="menu-root" aria-hidden="true">
+                
+
+                <!-- PANEL: MAIN -->
+                <section class="menu-panel" data-panel="main" role="dialog" aria-labelledby="menu-main-title">
+                    <h2 id="menu-main-title" class="visually-hidden">Main menu</h2> <!-- Dette blev tilføjet efter en fejl fra W3 Validator om manglende overskrift for skærmlæsere-->
+                    <button class="menu-close" aria-label="Luk menu">✕</button>
+
+                    <ul class="menu-list">
+                    <li>
+                        <button class="menu-item" data-open="shop">
+                        <span>Shop</span><span class="chevron">›</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="menu-item">
+                        <span>Serier</span><span class="chevron">›</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="menu-item">
+                        <span>Forkælelsespakker</span><span class="chevron">›</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="menu-item">
+                        <span>Brands</span><span class="chevron">›</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="menu-item">
+                        <span>Om Kystnær</span><span class="chevron">›</span>
+                        </button>
+                    </li>
+                    <li><a href="#">Blog og guides</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    </ul>
+                    <ul class="social-links">
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-pinterest-p"></i></li>
+                    <li><i class="fa-brands fa-tiktok"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                    </ul>
+                </section>
+
+                <!-- PANEL: SHOP -->
+                <section class="menu-panel" data-panel="shop" role="dialog" aria-labelledby="menu-shop-title">
+                    <button class="menu-close" aria-label="Luk menu">✕</button>
+
+                    <div class="menu-header">
+                    <button class="menu-back" data-back aria-label="Tilbage">
+                        ‹
+                    </button>
+                    <h2 id="menu-shop-title" class="menu-title">Shop</h2>
+                    </div>
+
+                    <ul class="menu-list">
+                    <li><button class="menu-item"><span>Udvalgte</span><span class="chevron">›</span></button></li>
+                    <li><button class="menu-item"><span>Hårpleje</span><span class="chevron">›</span></button></li>
+                    <li><button class="menu-item"><span>Hudpleje</span><span class="chevron">›</span></button></li>
+                    <li>
+                        <button class="menu-item" data-open="men">
+                            <span>Mænd</span><span class="chevron">›</span>
+                        </button>
+                        </li>
+
+                    <li><button class="menu-item"><span>Tilbehør</span><span class="chevron">›</span></button></li>
+                    <li><button class="menu-item"><span>Bolig og liv</span><span class="chevron">›</span></button></li>
+                    </ul>
+
+                    <img src="img/Neutralbalsamiskaal.webp"  class="menu-panel-img" alt="Neutral Balsam bar i skål">
+
+                    <a href="haarpleje.html" class="menu-cta">Se shop</a>
+                    
+                </section>
+
+                <!-- PANEL: MÆND -->
+                <section class="menu-panel" data-panel="men" role="dialog" aria-labelledby="menu-men-title">
+                    
+                    <div>
+                    <button class="menu-close" aria-label="Luk menu">✕</button>
+                    <img src="img/KystnaerShavingBarTangBarberingMandMaend1.webp" class="menu-panel-header-img" alt="Produkter til mænd">
+                    </div>
+
+                    <div class="menu-men">
+
+                    <div class="menu-header">
+                    <button class="menu-back" data-back aria-label="Tilbage">
+                        ‹
+                    </button>
+                    <h2 id="menu-men-title" class="menu-title">Mænd</h2>
+                    </div>
+
+                    <ul class="menu-list">
+                        <li><a href="haarpleje.html">Hårpleje</a><span class="chevron">›</span></li>
+                        <li><a href="#">Barbering</a><span class="chevron">›</span></li>
+                        <li><a href="#">Hudpleje</a><span class="chevron">›</span></li>
+                        <li><a href="#">Tilbehør</a><span class="chevron">›</span></li>
+                    </ul>
+
+                    <a href="index.html" class="menu-cta">Se Mænd</a>
+
+                    <h2>Bestsellers hos mænd</h2>
+
+                    <div class="menu-slider" aria-label="Udvalgte produkter">
+                        <a href="rosmarin.html"><img src="img/RosmarinShampoo.webp" alt="Rosmarin Shampoo Bar, styrker hårvækst">Rosmarin Shampoo Bar - Styrker hårvækst</a>
+                        <span><img src="img/rosmaringbalsam.webp" alt="Rosmarin Balsam Bar, styrker hårvækst">Rosmarin Balsam Bar - Styrker hårvækst</span>
+                        <span><img src="img/ShavingBar.webp" alt="Tang Shaving Bar, Beroligende og antibakteriel">Tang Shaving Bar - Beroligende og antibakteriel</span>
+                        <span><img src="img/aktivtkulshampoo.webp" alt="Aktivt Kul Shampoo, Mod skæl og irriteret hovedbund">Aktivt Kul Shampoo - Mod skæl og irriteret hovedbund</span>
+                    </div>
+                    </div>
+                </section>
+               
+            </nav>
+ 
+        <main>
+            <div class="page-description-general" >
+                <h1>Hårpleje</h1>
+                <p>Hårpleje til mænd, med fokus på funktion og 
+                kvalitet. Produkterne er håndlavet i fast form og udviklet til at pleje din hovedbund og dit hår.</p>
+                <p>
+                Kystnærs produkter gør hårrutinen enkel og effektiv - tilpasset forskellige hårtyper og udfordringer.
+                </p>
+            </div>
+
+        <div class="page-content">
+            <div class="grillspyd" >
+                <img src="img/grillspyd.png" alt="Filtrer og sorter">
+                <p>Filtrer og sorter</p>
+            </div>
+
+            <section class="product-grid">
+
+                <div class="grid-item">
+                    
+                    <a href="rosmarin.html" class="grid-link">
+
+                    <div class="grid-media">
+                        <img
+                        class="grid-img"
+                        src="img/KystnaerShampooBarRosmarinHarvaekst_Glansogpleje3.webp"
+                        alt="Rosmarin Shampoo Bar">
+                    </div>
+
+                    <p class="grid-label">
+                        Rosmarin Shampoo Bar – Styrker hårvækst <p>140,00 kr</p>
+                    </p>
+
+                    </a>
+                </div>
+
+                <div class="grid-item">
+                    <a href="" class="grid-link">
+
+                    <div class="grid-media">
+                        <img
+                        class="grid-img"
+                        src="img/KystnaerBalsamBarRosmarinHarvaekst_Glansogpleje1.webp"
+                        alt="Rosmarin Balsam Bar">
+                    </div>
+
+                    <p class="grid-label">
+                        Rosmarin Balsam Bar - Styrker hårvækst<p>145,00 kr</p>
+                    </p>
+
+                    </a>
+                </div>
+
+                <div class="grid-item">
+                    <a href="" class="grid-link">
+
+                    <div class="grid-media">
+                        <img
+                        class="grid-img"
+                        src="img/KystnaerShampooBarAktivtKulSkael_fedtetharogirriterethovedbund1.webp"
+                        alt="Aktivt Kul Shampoo Bar">
+                    </div>
+
+                    <p class="grid-label">
+                        Aktivt Kul Shampoo Bar - Mod skæl og irriteret hovedbund<p>145,00 kr</p>
+                    </p>
+
+                    </a>
+                </div>
+
+                <div class="grid-item">
+                    <a href="" class="grid-link">
+
+                    <div class="grid-media">
+                        <img
+                        class="grid-img"
+                        src="img/KystnaerShampooBarNeutralSarthovedbundogallergi1.webp"
+                        alt="Neutral Shampoo Bar">
+                    </div>
+
+                    <p class="grid-label">
+                        Neutral Shampoo Bar - Sart hovedbund og allergi<p>140,00 kr</p>
+                    </p>
+
+                    </a>
+                </div>
+
+                <div class="grid-item">
+                    <a href="" class="grid-link">
+
+                    <div class="grid-media">
+                        <img
+                        class="grid-img"
+                        src="img/KystnaerBalsamBarNeutralSarthovedbundogallergi2.webp"
+                        alt="Neutral Balsam Bar">
+                    </div>
+
+                    <p class="grid-label">
+                        Neutral Balsam Bar - Sart hovedbund og allergi<p>145,00 kr</p>
+                    </p>
+
+                    </a>
+                </div>
+
+                <div class="grid-item">
+                    <a href="" class="grid-link">
+
+                    <div class="grid-media">
+                        <img
+                        class="grid-img"
+                        src="img/KystnaerHarborsteSmalBambusBambovement1.webp"
+                        alt="Bambus hårbørste fra Bamboovement">
+                    </div>
+
+                    <p class="grid-label">
+                        Bambus Hårbørste - Smal<p>39,00 kr</p>
+                    </p>
+
+                    </a>
+                </div>
+
+                <div class="grid-item">
+                    <a href="" class="grid-link">
+
+                    <div class="grid-media">
+                        <img
+                        class="grid-img"
+                        src="img/KystnaerHarkamBambusBamboovement1.webp"
+                        alt="Bambus hårkam fra Bamboovement">
+                    </div>
+
+                    <p class="grid-label">
+                        Bambus Hårkam <p>39,00 kr</p>
+                    </p>
+
+                    </a>
+                </div>
+
+            </section>
+        </div>
+
+ 
+            <!-- Nyhedsbrev -->
+            <section class="newsletter">
+                <div class="newsletter-content">
+
+                    <div class="newsletter-text">
+                    <h2>Tilmeld dig vores nyhedsbrev og få 10% rabat på dit første køb</h2>
+                    <p>Vær den første til at modtage tilbud, nyheder og tips til hud- og hårpleje</p>
+                    </div>
+
+                    <form class="newsletter-form" action="#" method="post">
+                    <input type="email" name="email" placeholder="Din email" required>
+                    <button type="submit">Tilmeld</button>
+                    </form>
+
+                </div>
+            </section>
+
+
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-container">
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                <h3>Kontakt</h3>
+                <h4>Kystnær</h4>
+                <p><a href="mailto:kontakt@kystnaer.com">kontakt@kystnaer.com</a></p>
+                <p>Ørbyhage 96<br>6100 Haderslev</p>
+                <p>Tlf: <a href="tel:+4571723191">+45 71 72 31 91</a></p>
+                </div>
+
+                <!-- About Column -->
+                <div class="footer-column">
+                <h3>Om Kystnær</h3>
+                <ul>
+                    <li><a href="#">Hvem er vi?</a></li>
+                    <li><a href="#">Find forhandlere</a></li>
+                    <li><a href="#">Bliv forhandler</a></li>
+                    <li><a href="#">B2B Login</a></li>
+                    <li><a href="#">Kontakt os</a></li>
+                </ul>
+                </div>
+
+                <!-- Information Column -->
+                <div class="footer-column">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">Returpolitik</a></li>
+                    <li><a href="#">Levering- og handelsbetingelser</a></li>
+                    <li><a href="#">Persondatapolitik</a></li>
+                    <li><a href="#">LAG og kommissionen</a></li>
+                </ul>
+                </div>
+
+                <!-- Social Column -->
+                <div class="footer-column">
+                <h3>Følg med</h3>
+                <ul class="social-links">
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-pinterest-p"></i></li>
+                    <li><i class="fa-brands fa-tiktok"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                </ul>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-left">
+                    <div>
+                    <p> 
+                        <select><option>Danmark (DKK kr.)</option></select>
+                    </p>
+                    </div>
+                    <div>
+                    <p> 
+                        <select><option>Dansk</option></select>
+                    </p>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <p>Drevet af Shopify</p>
+                    <p>© 2026, Kystnær</p>
+                </div>
+            </div>
+
+        </footer>
+
+    </body>
+
+</html>

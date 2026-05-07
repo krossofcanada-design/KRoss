@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NærDanmark - Natur og Friluftsliv</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    
+    <!--A link within html to google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+
+     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+
+    <!--A link within html to popular icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+    <body>
+
+        <header class="top-nav">
+            <!-- venstre side af navigationen -->
+            <div class="nav-left">
+                <a href="index.html">
+                <img src="img/Topnav/TransparentLogo.png" alt="NærDanmark logo" class="logo">
+                </a>
+                <span class="company-name">NærDanmark</span>
+            </div>
+
+            <!-- højre side af navigationen -->
+            <div class="nav-right">                            
+                 <a href="Loginside.html">
+                    <img src="img/Topnav/bruger.png" alt="Login" class="icon login-icon">
+                </a>
+                <img src="img/Topnav/kurv.png" alt="Kurv" class="icon cart-icon">
+                <i class="fa-solid fa-heart heart"></i>
+                <i class="fa-solid fa-bars hamburger" id="hamburger"></i> <!-- jeg har tilføjet id i hamburgermenuen, fordi jeg har brug for at kalde på hamburgeren i js -->
+                
+            </div>
+  
+            <!-- Hidden menu -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <a href="index.html">Forside</a>
+                <a href="OmOs.html">Om os</a>
+                <a href="#">Skjulte Perler</a>
+                <a href="#">Lokale Smagsoplevelser</a>
+                <a href="NaturOgFriluftsliv.html">Natur & Friluftsliv</a>
+                <a href="#">Kultur & Historie</a>
+                <a href="#">Kunst og Musik</a>
+                <a href="#">Når Det Regner Og Blæser</a>
+                <a href="#">Workshops & Velvære</a>
+                <a href="#">Grønne Overnatningssteder</a>
+                <a href="Loginside.html">Login</a>
+            </nav>
+        </header>
+
+        <main>
+            
+            <!-- Hero text box, der skal adskille sig fra forsiden -->
+            <p class="box bg-text natur-hero">
+                Natur & Friluftsliv
+            </p>
+
+            <!-- Second box with new image -->
+            <div class="box image-box">
+                <!-- Natur og Friluftsliv billede -->
+            </div>
+
+             <!-- Search Bar -->
+            <div class="search-container">
+                <i class="fas fa-calendar-alt calendar-icon" id="calendarIcon"></i>
+                <input type="text" id="search" placeholder="Find dit næste eventyr...">
+                <i class="fas fa-search search-icon"></i>
+                <input type="date" id="calendarPicker">
+            </div>
+
+            <div class="event-grid">
+
+                <!-- Event 1 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <div class="favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/NaturOgFriluftsliv/Kano gudenåen.jpg" alt="Event 1">
+                    <p>Kanotur på Gudenåen, Midtjylland </p>
+                </a>
+
+                <!-- Event 2 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <div class="favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/NaturOgFriluftsliv/Lille vildemose.jpg" alt="Event 2">
+                    <p>Efterårstur med naturvejleder, Lille Vildmose Centeret</p>
+                </a>
+
+                <!-- Event 3 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <div class="favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/NaturOgFriluftsliv/Ridning hestevogn.jpg" alt="Event 3">
+                    <p>Ridning & hestevognstur i Rold Skov, Rebild</p>
+                </a>
+
+                <!-- Event 4 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <div class="favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/NaturOgFriluftsliv/Klatre svæve.jpg" alt="Event 4">
+                    <p>Klatre- & svævebane i Klinteskoven, Møn </p>
+                </a>
+
+                <!-- Event 5 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <div class="favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/NaturOgFriluftsliv/Havkajak.jpg" alt="Event 5">
+                    <p>Havkajak i Kalø Vig, Mols</p>
+                </a>
+
+                <!-- Event 6 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <div class="favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/NaturOgFriluftsliv/Glamping.jpg" alt="Event 6">
+                    <p>Glamping på Knabstedgaard, Sydsjælland</p>
+                </a>
+                
+                <!-- Event 7 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <div class="favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/NaturOgFriluftsliv/SkovTaarnet.jpg" alt="Event 5">
+                    <p>Skovtårnet ved Camp Adventure, Rønnede</p>
+                </a>
+
+                <!-- Event 8 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <div class="favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/NaturOgFriluftsliv/Skodsbjerg Fyr.jpg" alt="Event 6">
+                    <p>Skodsbjerg Fyr, Hundested </p>
+                </a>
+
+                </div>
+
+
+            <div class="button-container">
+                <button class="load-more-btn">Vis flere</button>
+            </div>
+
+        </main>
+    
+
+        <footer>
+
+            <div class="footer-section">
+                <h3>Kontakt os:</h3>
+                <p>
+                NærDanmark<br>
+                Krovej 123,<br>
+                9999 Hyggehavn
+                </p>
+                <p>
+                Telefon: +45 88 88 88 00<br>
+                Mail: <a href="mailto:info@naerdanmark.dk">info@naerdanmark.dk</a>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Tilmeld nyhedsbrev</h3>
+                <form>
+                <input type="email" placeholder="Din email">
+                <button type="submit">Tilmeld</button>
+                </form>
+
+                <h3>Følg os:</h3>
+                <div class="social-icons">
+                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                </div>
+
+                <ul>
+                <li><a href="#">Handelsbetingelser</a></li>
+                <li><a href="#">Privatlivspolitik</a></li>
+                </ul>
+            </div>
+
+            <!-- Bottom Navbar -->
+            <nav class="bottom-nav">
+                <a href="#" class="nav-item">
+                    <img src="img/bottomnav/ForaarIkon.png" alt="Forår">
+                    <span>Forår</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="img/bottomnav/SommerIkon.png" alt="Sommer">
+                    <span>Sommer</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="img/bottomnav/EfteraarsIkon.png" alt="Efterår">
+                    <span>Efterår</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="img/bottomnav/VinterIkon.png" alt="Vinter">
+                    <span>Vinter</span>
+                </a>
+            </nav>
+        </footer>
+
+<!-- Here's the part that connects to the JavaScript file. It's in the end, because Js grabs things "above" it -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

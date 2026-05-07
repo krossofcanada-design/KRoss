@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>YourJourney</title>
+
+      <link rel="stylesheet" href="css/style.css">
+
+      <script src="js/script.js" defer></script> <!-- This is a newer method that helps run pages faster as js is loading at the same time. Putting the js link at the bottom of the body section was a popular option before, and is mainly used when there's no more than js files. -->
+      
+      <script src="https://kit.fontawesome.com/aa47f20784.js" crossorigin="anonymous"></script>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light+Two&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+
+  </head>
+
+
+  <body>
+      
+        <header class="top-nav">
+          <!-- LEFT side of navigation -->
+          <div class="nav-left">
+            <a href="index.html">
+              <img src="img/Nav/Compass focused.png" alt="YourJourney logo" class="logo">
+            </a>
+            <div class="brand-text">
+              <span class="company-name">YourJourney</span>
+              <span class="tagline">to well-being</span>
+            </div>
+          </div>
+
+          <!-- RIGHT side of navigation -->
+          <div class="nav-right">
+            
+            <nav class="Menu" id="Menu" hidden>
+              <a href="UnderstandingMentalHealth.html">Understanding Mental Health</a>
+              <a href="FindingHelp.html">Finding Help</a>
+              <a href="Community.html">Community</a>
+              <a href="WellnesAndCopingTools.html">Wellness & Coping Tools</a>
+              <a href="Contact.html">Contact</a>
+            </nav>
+
+            <!-- Search -->
+            <div class="search-container">
+              <i id="search-toggle" class="fa fa-search" aria-hidden="true"></i>
+            </div>
+
+            <!-- Language switcher -->
+            <button id="lang-toggle" class="icon-btn lang-btn" aria-label="Change language">
+              <span id="current-lang">FR</span>
+            </button>
+
+            <!-- Hamburger Menu -->
+            <button
+              id="hamburger"
+              class="icon-btn hamburger"
+              aria-label="Toggle navigation menu"
+              aria-controls="Menu"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+          </div>
+        </header>
+
+        <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+          </ol>
+        </nav>
+
+            <!-- Hero image -->
+            <figure class="hero-image-container">
+                <img src="img/Contact.jpeg" 
+                    alt="Illustration of a young girl with a writing pad." 
+                    class="hero-image">
+                <figcaption class="hero-caption">
+                    Image credit: https://www.health.harvard.edu/mindscape and META AI
+                </figcaption>
+            </figure>
+
+        <form action="/submit-form" method="post" class="contact-form" aria-labelledby="contactFormTitle">
+          <h2 id="contactFormTitle">Contact Us</h2>
+      
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email Address <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required aria-required="true" placeholder="you@example.com">
+          </div>
+
+        <!-- Province -->
+        <div class="form-group">
+          <label for="province">Choose Province <span aria-hidden="true">*</span></label>
+          <select id="province" name="province" required aria-required="true" aria-describedby="provinceHint">
+            <option value="">Choose Province</option>
+            <option value="BC">BC</option>
+            <option value="AB">AB</option>
+            <option value="SK">SK</option>
+            <option value="MB">MB</option>
+            <option value="ON">ON</option>
+            <option value="QC">QC</option>
+            <option value="NB">NB</option>
+            <option value="NS">NS</option>
+            <option value="PE">PE</option>
+            <option value="NL">NL</option>
+          </select>
+          <small id="provinceHint">Each province offers different possibilies. By filling this out, you will get more precise information.</small>
+        </div>
+
+
+
+          <!-- Subject -->
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Reason for contacting us">
+          </div>
+
+          <!-- Message -->
+          <div class="form-group">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea 
+            id="message" 
+            name="message" 
+            required 
+            aria-required="true" 
+            rows="5" 
+            placeholder="Write your message here" 
+            maxlength="500"
+          ></textarea>
+          <small id="charCount">0 / 500</small> <!-- Made it ready for live sign count, but couldn't get the js working -->
+          </div>
+
+          <!-- Consent -->
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="consent" name="consent" required aria-required="true">
+          <label for="consent">I consent to my information being used to respond to my inquiry.</label>
+        </div>
+
+
+          <!-- Submit -->
+          <div class="form-group">
+            <button class="category-button" type="submit">Send Message</button>
+          </div>
+        </form>
+
+   </main>
+
+          <!-- ==================== FOOTER ==================== -->
+        <footer class="site-footer">
+            <div class="footer-container">
+                <!-- About / Brand -->
+                <div class="footer-brand">
+                    <img src="img/Nav/Compass focused with background.png" alt="YourJourney logo" class="footer-logo">
+                    <h2 class="company-name">YourJourney</h2>
+                    <p class="footer-text">
+                        YourJourney is a government supported online platform that aims to serve all of Canadian youth in navigating the landscape of mental health resources available nationally and provincially. It's your one-stop platform to reach the information and help you need.
+                    </p>
+                </div>
+
+                <!-- Contact / Social -->
+                <div class="footer-contact">
+                    <h3>Contact</h3>
+                    <p>Email: <a href="Contact.html">Contact</a></p>
+                    <p>Follow us:</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 YourJourney. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>

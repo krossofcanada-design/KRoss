@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NærDanmark - Login</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+
+     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Header: Same as index.html -->
+<header class="top-nav">
+    <div class="nav-left">
+        <a href="index.html">
+    <img src="img/Topnav/TransparentLogo.png" alt="NærDanmark logo" class="logo">
+  </a>
+        <span class="company-name">NærDanmark</span>
+    </div>
+
+    <div class="nav-right">                            
+                 <a href="Loginside.html">
+                    <img src="img/Topnav/bruger.png" alt="Login" class="icon login-icon">
+                </a>
+                <img src="img/Topnav/kurv.png" alt="Kurv" class="icon cart-icon">
+                <i class="fa-solid fa-heart heart"></i>
+                <i class="fa-solid fa-bars hamburger" id="hamburger"></i> <!-- jeg har tilføjet id i hamburgermenuen, fordi jeg har brug for at kalde på hamburgeren i js -->
+                
+            </div>
+
+    <!-- Hidden mobile menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Forside</a>
+        <a href="OmOs.html">Om Os</a>
+        <a href="#">Skjulte Perler</a>
+        <a href="#">Lokale Smagsoplevelser</a>
+        <a href="NaturOgFriluftsliv.html">Natur & Friluftsliv</a>
+        <a href="#">Kultur & Historie</a>
+        <a href="#">Kunst & Musik</a>
+        <a href="#">Når Det Regner Og Blæser</a>
+        <a href="#">Workshops & Velvære</a>
+        <a href="#">Grønne Overnatningssteder</a>
+        <a href="Loginside.html">Login</a>
+    </nav>
+</header>
+
+<!-- Main content -->
+<main>
+    <h1>DIN SIDE</h1>
+    <div class="points-container">
+        <div class="points-text">
+            <p>Velkommen tilbage!</p>
+            <p>Du har optjent:</p>
+        </div>
+        <span class="points-value">1250 Point</span>
+    </div>
+
+    <div class="clickable-list-container">
+        <h2>Dine kommende oplevelser</h2>
+            <ul class="clickable-list">
+                <li><a href="#">Æblerov i Nybro Frugtplantage, Kerteminde 25.09.2025</a></li>
+                <li><a href="#">Kajak, Halsnæs Bugt 20.10.2015</a></li>
+                <li><a href="#">Vinterbadning & Sauna ved Vesterstrand Sauna, Æreskøbing 14.12.2025</a></li>
+            </ul>
+    </div>
+
+<div class="inspiration-container">
+  <div class="inspire-text">
+    <p>Opdag de mange aktiviteter og steder,</p>
+    <p>du kan indløse dine point til</p>
+  </div>
+  <img src="img/forstørrelsesglas.png" alt="Inspiration Icon" class="inspire-icon">
+</div>
+
+<div class="event-grid">
+
+                <!-- Event 1 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <div class="favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/Svampetur.png" alt="Event 1">
+                    <p>Svampejagt i Mols bjerge, Karpenhøj Naturcenter</p>
+                </a>
+
+                <!-- Event 2 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <div class="favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/Kategorier/overnatningssteder.jpg" alt="Event 2">
+                    <p>Efterårsophold hos Falsted Kro, Sydfyn</p>
+                </a>
+
+                <!-- Event 3 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <div class="favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/kransebinderi.png" alt="Event 3">
+                    <p>Efterårsworkshop i kransebinding, FOF Sydjylland</p>
+                </a>
+
+                <!-- Event 4 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <div class="favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/æblefestival.jpg" alt="Event 4">
+                    <p>Tuse Næs æblefestival, Isefjorden</p>
+                </a>
+</div>
+
+<div class="button-container">
+  <button class="load-more-btn">Vis flere</button>
+</div>
+
+<div class="clickable-list-container">
+        <h2>Dine tidligere oplevelser</h2>
+            <ul class="clickable-list">
+                <li><a href="#">Guidet sælsafari, Mandø Event, Mandø 2024</a></li>
+                <li><a href="#">Overnatning i trætophytte, Løvtag Treetop Hotel, Als Odde 2024</a></li>
+                <li><a href="#">Mikrobryggeri-smagning, Esrum Sø Mikrobryggeri, Fredensborg 2023</a></li>
+                <li><a href="#">Overnatning, Tornøes Hotel, Kerteminde 2022</a></li>
+            </ul>
+    </div>
+
+</main>
+
+<!-- Footer: Same as index.html -->
+<footer>
+
+<div class="footer-section">
+    <h3>Kontakt os:</h3>
+    <p>
+      NærDanmark<br>
+      Krovej 123,<br>
+      9999 Hyggehavn
+    </p>
+    <p>
+      Telefon: +45 88 88 88 00<br>
+      Mail: <a href="mailto:info@naerdanmark.dk">info@naerdanmark.dk</a>
+    </p>
+  </div>
+
+  <div class="footer-section">
+    <h3>Tilmeld nyhedsbrev</h3>
+    <form>
+      <input type="email" placeholder="Din email">
+      <button type="submit">Tilmeld</button>
+    </form>
+
+    <h3>Følg os:</h3>
+    <div class="social-icons">
+      <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+    </div>
+
+    <ul>
+      <li><a href="#">Handelsbetingelser</a></li>
+      <li><a href="#">Privatlivspolitik</a></li>
+    </ul>
+  </div>
+
+                <!-- Bottom Navbar -->
+            <nav class="bottom-nav">
+                <a href="#" class="nav-item">
+                    <img src="img/bottomnav/ForaarIkon.png" alt="Forår">
+                    <span>Forår</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="img/bottomnav/SommerIkon.png" alt="Sommer">
+                    <span>Sommer</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="img/bottomnav/EfteraarsIkon.png" alt="Efterår">
+                    <span>Efterår</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="img/bottomnav/VinterIkon.png" alt="Vinter">
+                    <span>Vinter</span>
+                </a>
+            </nav>
+</footer>
+
+<!-- JS -->
+<script src="js/script.js"></script>
+</body>
+</html>

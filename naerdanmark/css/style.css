@@ -1,0 +1,713 @@
+/* <==== Hoved-styling af forside også kaldet global css ========> */ 
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'urbanist', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  padding-top: 70px; /* space for fixed topnav */
+  padding-bottom: 70px; /* space for bottom nav */
+}
+
+
+/* ========== TOP NAVIGATION ========== */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #ffffffdc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 2px solid #ddd;
+  z-index: 1000; /* layering system i kode, som en z-akse, hvor elementerne får et nummer an på det lag de skal høre til. Et højt nummer, som her, indikerer at vi gerne vil have at vores navigation er over al indholdet i main */
+}
+
+/* Left side (logo + name) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.company-name {
+  font-family: 'syne', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #9A0505;
+  display: inline-block;  /* required for transform to apply cleanly */
+}
+
+/* Right side (icons) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-icon {
+  height: 24px;
+  width: 24px;
+  color: #9A0505;   /* change to your preferred color */
+  cursor: pointer;
+}
+
+.cart-icon {
+  height: 25px;
+  width: 25px;
+  color: #9A0505;   /* change to your preferred color */
+  cursor: pointer;
+
+}
+
+.heart {
+  font-size: 24px;
+  color: #9A0505;
+  cursor: pointer;
+  user-select: none;
+}
+
+.hamburger {
+  font-size: 24px;
+  color: #9A0505;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+/* Menu links */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: #444444ee;
+  width: 200px;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.mobile-menu.show {
+  display: flex;
+}
+
+.mobile-menu a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.mobile-menu a:hover {
+  background-color: #9A0505;
+}
+
+
+
+
+
+
+
+/* <========== Introbox og besked =============> */
+
+.box {
+  min-height: 150px;
+  width: 100%;
+  background-image: url(../img/efterårsbillede.jpg);
+  background-position: center;
+  background-size: cover;     /* scales to cover. Jeg valgte dette, selvom det gjorde billedet kæmpe, fordi det endte med at være den smukkeste løsning til forsiden. I lignende situation på Natur&Frilutsliv-siden satte jeg dette til 1000px, fordi billedet ellers ville miste sin mening, selvom dette valg gør, at designet ikke responsivt på samme måde */
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;        /* vertical center */
+  justify-content: center;    /* horizontal center */
+}
+
+.bg-text {
+  font-family: 'syne', sans-serif;
+  font-size: 28px;
+  text-align: center;  
+  background-image: url(../img/efterårsbillede.jpg);
+  background-position: center;
+  background-size: contain;     
+  background-clip: text;
+  -webkit-background-clip: text; /*Same as background-clip, but the WebKit-prefixed version for Chrome, Safari, and iOS browsers. (Necessary because not all browsers use the unprefixed property.)*/
+  -webkit-text-fill-color: transparent;
+  background-attachment: fixed;
+}
+
+.box-overlay-text h2 {
+  color: #fff;
+  font-family: 'urbanist', sans-serif;
+  font-size: 18px;
+  margin: 0 0 10px 0; /* spacing under heading */
+  text-align: center;
+}
+
+.box-overlay-text p {
+  color: #fff;
+  font-family: 'urbanist', sans-serif;
+  font-size: 15px;
+  margin: 0;
+  text-align: center;
+  padding: 0 20px; /* top/bottom = 0, left/right = 20px */
+}
+
+
+
+
+
+
+
+
+/* <======== Alle styling links til vores search bar =============> */
+
+.search-container {
+  position: relative;
+  margin: 10px 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px 40px 10px 40px; /* left for calendar, right for search */
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.search-container i.calendar-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9A0505;
+  cursor: pointer;
+  pointer-events: auto;
+  font-size: 18px;
+}
+
+.search-container i.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9A0505;
+  pointer-events: none;
+  font-size: 18px;
+}
+
+/* Når man klikker på search bar */
+.search-container input:focus {
+  outline: none;
+  border-color: #9A0505;
+  box-shadow: 0 0 5px #9A0505;
+}
+
+/* Ville gerne have haft min kalender til at vise datoer, når man klikker på den, men løb tør for tid, så måtte indsætte dette for at skjule den efter at have rodet med den */
+#calendarPicker {
+  position: absolute;
+  left: -9999px; /* hide it offscreen */
+  height: 0;
+  width: 0;
+  opacity: 0;    /* completely invisible */
+}
+
+
+
+
+
+
+
+/* <========== Event grid - opsætning af kategori eller event cards med faste billedestørrelser og tekst og i et grid, der er konsistent og ligner polaroid billeder lidt ===============> */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Event card */
+.event-card {
+  text-decoration: none; 
+  color: inherit;        /* keep your custom text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+/* remove underline in ALL link states */
+.event-card:link,
+.event-card:visited,
+.event-card:hover,
+.event-card:active,
+.event-card:focus {
+  text-decoration: none;
+  color: inherit; /* holder teksten fast i vores farve #9A0505 i stedet for at skifte til blå, når den er blevet aktiveret*/
+}
+
+.event-card:hover {
+  transform: scale(1.03); /* glidende pop effekt, når man kører musen henover*/
+  box-shadow: 0 4px 12px rgba(154, 5, 5, 0.5);
+}
+
+
+.event-card img {
+  width: 100%;          /* Stretch to the full card width */
+  height: 180px;        /* Fixed height for all images */
+  object-fit: cover;    /* Crop to fill box, keeps proportions */
+  border-radius: 8px;   /* Optional: rounded corners */
+}
+
+.event-card p {
+  font-family: 'syne', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #9A0505;
+  margin-top: 12px;        
+  padding: 0 5px;  
+}
+
+.favorite {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 22px;
+  color: #fff; /* default solid white */
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.favorite:hover {
+  color: #9A0505; /* red on hover */
+  transform: scale(1.2);
+}
+
+/* active state — stays red */
+.favorite.active {
+  color: #9A0505;
+}
+
+
+
+
+/* <==== Styling af text med pil under event cards =====> */
+
+.after-event-cards {
+  width: 100%;
+  text-align: center; /* center text and image horizontally */
+  margin: 50px 0;    /* spacing from event cards */
+  font-family: 'Urbanist Regular', sans-serif;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.after-event-cards .inline-icon {
+  display: inline-block; /* ensures it stays inline with the text */
+  width: 60px;           /* adjust icon size */
+  height: 60px;
+  margin-left: 8px;      /* space between text and image */
+  vertical-align: middle; /* aligns the image with text baseline */
+}
+
+
+
+
+
+
+
+
+
+/* <============ Footer med kontakt info, nyhedsbrev, social media, etc. ======> */
+footer {
+  display: flex;
+  justify-content: space-between;
+  background: #f4f4f4;
+  padding: 30px 20px 80px;
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+  flex-wrap: nowrap;  /* prevent stacking on small screens */
+  gap: 15px;
+}
+
+/* Each footer section side by side */
+.footer-section {
+  flex: 1;             /* sections take equal width */
+  min-width: 140px;    /* ensures sections don't collapse */
+}
+
+/* Headings */
+.footer-section h3 {
+  margin-bottom: 0px;
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 16px;     /* smaller font for mobile */
+  color: #000;
+}
+
+/* Paragraphs */
+.footer-section p {
+  margin-bottom: 10px;
+  font-size: 14px;      /* smaller font for mobile */
+  line-height: 1.4;
+}
+
+/* Links inside paragraphs or list */
+.footer-section a {
+  color: #9A0505;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-section a:hover {
+  text-decoration: underline; /* bare for at man kan se, at man har trykket på det */
+}
+
+/* Social icons */
+.social-icons {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 25px;  /* smaller icons for mobile */
+  height: 25px;
+  transition: transform 0.2s; 
+}
+
+.social-icons img:hover {
+  transform: scale(1.1); /* den der nice pop effekt, når musen bevæger sig henover*/
+}
+
+/* List inside footer */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 6px; /* space between list items */
+}
+
+.footer-section ul li a {
+  color: #9A0505; /* for at klargøre for brugeren, at det er et link man kan trykke på */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  color: #9A0505; /* text decoration set til default med understregning, så det er endnu mere klart, at det er et interaktivt link */
+}
+
+
+
+
+
+
+/* <========== Styling af vores bund navigation ==============> */
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #ffffffdc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.2);
+}
+
+.bottom-nav .nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #9A0505;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.bottom-nav .nav-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+  transition: transform 0.2s ease;
+}
+
+.bottom-nav .nav-item:hover img,
+.bottom-nav .nav-item:focus img {
+  transform: scale(1.1);
+}
+
+.bottom-nav .nav-item:active img {
+  transform: scale(0.95);
+}
+
+
+
+
+
+/* <============= Login.html ====================> */
+
+/* Her kommer ekstra styling af Loginside.html, som er forskellig fra forside (index.html) */
+
+main h1 {
+  text-align: center;               /* centers the text horizontally */
+  color: #000000;                   /* black text */
+  background-color: #eae9e7;        /* light gray box */
+  padding: 15px 15px;               /* vertical and horizontal padding */
+  border-radius: 12px;              /* rounded corners */
+  max-width: 600px;                 /* optional: limit width for large screens */
+  margin: 30px auto;                /* center horizontally with margin on top/bottom */
+  box-sizing: border-box;           /* include padding in width calculation */
+  font-family: 'Urbanist', sans-serif; /* example font */
+  font-size: 20px;                  /* adjust size as needed */
+}
+
+.points-container {
+  display: flex;                   /* place text and value side by side */
+  justify-content: space-between;  /* push left and right apart */
+  align-items: center;             /* vertical center */
+  max-width: 400px;                /* optional max width */
+  margin: 20px auto;               /* center container */
+  padding: 15px 20px;              /* inner spacing */
+  border-radius: 10px;             /* rounded corners */
+}
+
+.points-text p {
+  margin: 0;                       /* remove default paragraph margin */
+  line-height: 1.3;                /* spacing between lines */
+  font-family: 'Urbanist', sans-serif;
+  font-size: 18px;
+  color: #9A0505;
+}
+
+.points-value {
+  font-weight: bold;
+  color: #9A0505;
+  font-size: 25px;
+}
+
+
+
+/* Dine kommende oplevelser */
+/* Container for the clickable list */
+.clickable-list-container {
+  max-width: 600px;
+  margin: auto; /* Center container */
+  padding: 15px;
+}
+
+/* Heading inside the container */
+.clickable-list-container h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 15px;
+  transform: scaleY(1.2); /* make it 20% taller */
+  
+}
+
+/* Remove default bullets from the ul */
+.clickable-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* List links styling */
+.clickable-list li a {
+  display: block;
+  position: relative;           /* Required for bullet pseudo-element */
+  padding: 12px 20px 12px 35px; /* Extra left padding for the bullet */
+  background-color: #eae9e7;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Custom bullet using ::before */
+.clickable-list li a::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #9a0505;
+  border-radius: 50%;
+}
+
+/* Hover effect for links */
+.clickable-list li a:hover {
+  background-color: #9a0505;
+  color: #fff;
+}
+
+
+.inspiration-container {
+  display: flex;
+  align-items: center;       /* vertically center icon with text block */
+  gap: 15px;                 /* space between text and icon */
+  max-width: 400px;
+  margin: 30px auto 40px auto;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+/* New text wrapper */
+.inspire-text {
+  display: flex;
+  flex-direction: column;    /* stack the two lines vertically */
+  text-align: center;        /* center the second line under the first */
+}
+
+.inspire-text p {
+  margin: 0;
+  font-family: 'Syne', sans-serif;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.4;
+}
+
+.inspire-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;            /* prevents icon from shrinking */
+}
+
+
+/* "Vis flere" knap */
+
+.button-container {
+  text-align: center;   /* center the button */
+  margin: 30px 0;
+}
+
+.load-more-btn {
+  padding: 12px 25px;
+  background-color: #9A0505;   
+  color: #fff;
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 25px;         
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.load-more-btn:hover {
+  background-color: #7a0404;   /* darker red */
+  transform: translateY(-2px); /* subtle hover lift */
+}
+
+
+
+
+/* <=============== OmOs.html =========================> */
+
+
+/* OmOs image box */
+.image-box {
+    max-width: 600px;        /* match project width */
+    max-height: 300;
+    margin: 20px auto;       /* center horizontally */    
+    margin-top: 50px;
+    overflow: hidden;        /* ensures image respects border radius */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+.image-box img {
+    width: 100%;             /* full width of box */
+    height: auto;            /* maintain aspect ratio */
+    display: block;
+}
+
+.omos-content h2 {
+  font-family: 'Urbanist', sans-serif;
+  text-align: center;
+  color: #9A0505;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  
+}
+
+.omos-content p {
+  font-family: 'Urbanist', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 0 20px;   /* left/right breathing room */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+.center-icon {
+  display: block;
+  margin: 90px auto; /* centers and adds space above/below */
+  width: 100px;       /* small size */
+  height: auto;      /* keeps proportions */
+}
+
+
+
+
+
+/* <=============== Destinationssiden NATUR & FRILUFTSLIV =================> */
+
+/* Natur & Friluftsliv hero sektion */
+.box.bg-text.natur-hero {
+  font-size: 36px; 
+}
+
+/* Nyt billed med box under bg-text */
+.image-box {
+  background-image: url(../img/Kategorier/naturogfriluftsliv.png);
+  background-position: top;
+  background-size: 1000px;        
+  background-attachment: fixed;
+  min-height: 200px;             
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}

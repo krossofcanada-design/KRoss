@@ -1,0 +1,972 @@
+/* Farvevalg baseret på 60/30/10 modellen:
+60 = hvid #fff
+30 = lys-grå #f5f5f5, skov-grøn #004d40
+10 = karry-gul #b8a600, mørk grå #333, roed #e14f3c/
+/* Efter contrast checker blev jeg gjort opmærksom på, at min karrygule farve ikke havde nok kontrast, så den blev ændret til en mørkere tone:  #857700   */
+
+/* ==================== RESET & GLOBAL ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:focus-visible {
+  outline: 3px solid #857700; /* global settings for tab function */ 
+  outline-offset: 2px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px; /* sat til 16px globalt og derefter forholder alle font størrelser sig til denne via rem */ 
+  color: #004d40;
+  background-color: #fff;
+}
+
+main {
+    padding-bottom: 6rem; /* speparating main content from footer */
+}
+
+ul {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin-left: 0;
+}
+
+ul li{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+h3 {
+  text-decoration-line: underline;
+}
+
+mark {
+  background-color: #ffeb99; /* highlighter settings */ 
+  color: #222;
+  padding: 0.1em 0.2em;
+  border-radius: 0.2em;
+}
+
+/* ==================== TOP NAV ==================== */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff; /* changed to solid, usability test uncovered potential perceivability issue */
+  padding: 0.8rem 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* ---------- LEFT SIDE ---------- */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.logo {
+  height: 70px;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.company-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 0.75rem;
+  color: #00695c;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* ---------- RIGHT SIDE ---------- */
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem; /* wanted to give more air, but it looked too squished on mobile */ 
+}
+
+/* ==================== ICONS & LANGUAGE ==================== */
+.icon-btn,
+#search-toggle {
+  font-size: 1.4rem;
+  color: #004d40;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-btn:hover,
+#search-toggle:hover {
+  transform: scale(1.1);
+  color: #857700;
+}
+
+/* --- Language Button --- */
+.lang-select {
+  font-size: 1rem;
+  color: #004d40;
+  cursor: pointer;
+  appearance: none;
+  transition: all 0.3s ease;
+}
+
+.lang-select:hover,
+.lang-select:focus {
+  background-color: #f8f6f0;
+  border-color: #00695c;
+  color: #00695c;
+  outline: none;
+}
+
+/* --- Mobile-first (default) --- */
+.Menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  display: none; /* hidden until toggled */
+  flex-direction: column;
+  align-items: center;
+  background-color: #fffffff3;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: 999;
+}
+
+.Menu.show {
+  display: flex;
+}
+
+.Menu a {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 1rem 0;
+  color: #004d40;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Menu a:hover,
+.Menu a:focus-visible {
+  background-color: #857700;
+  color: #ffffff;
+}
+
+/* --- Hamburger --- */
+.hamburger {
+  display: block;
+  font-size: 2rem;
+  color: #004d40;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+  color: #857700;
+}
+
+.hamburger i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hamburger.open i {
+  transform: rotate(90deg);
+  color: #857700;
+}
+
+/* ==================== DESKTOP (≥1300px) Mit valg, for ellers så menuen bare for presset ud ==================== */
+@media (min-width: 1300px) {
+  .Menu {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    gap: 1.2rem;
+    margin-left: auto;
+  }
+
+  .Menu a {
+    width: auto;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav-right {
+    gap: 2rem;
+  }
+}
+
+
+/* ==================== MAIN CONTENT ==================== */
+
+/* --------- Breadcrumb container -----------  */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  margin: 1rem 1.5rem;
+  padding: 0;
+}
+
+/* Breadcrumb items */
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #004d40;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover,
+.breadcrumb-item a:focus {
+  color: #857700;
+  text-decoration: underline;
+}
+
+/* Separator between items */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "›"; 
+  margin: 0 0.5rem;
+  color: #333;
+}
+
+/* Current page styling */
+.breadcrumb-item.active {
+  color: #333;
+  font-weight: 600;
+}
+
+
+/* --------- Hero section --------- */ 
+.hero-text {
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  font-size: 1rem;
+}
+
+.hero-image-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto; /* center container horizontally */
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  max-height: 600px;
+  display: block;
+  object-fit: cover; /* keeps aspect ratio while filling space */
+}
+
+.hero-caption {
+  font-size: 0.75rem;
+  color: #004d40;
+  line-height: 1.4;
+  text-align: right;
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ------ Page descrition ----- */
+
+.heading {
+  font-size: 1.4rem;
+  font-weight: 650;
+  padding-bottom: 1rem;
+  color: #004d40;
+}
+
+.page-description {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.brand-name {
+  color: #004d40;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+/* ==================== CATEGORIES ==================== */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.category {
+  text-align: left;
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.category:nth-child(1),
+.category:nth-child(3),
+.category:nth-child(5) {
+  background-color: #f5f5f5;
+}
+
+.category:nth-child(2),
+.category:nth-child(4) {
+  background-color: #ffffff;
+}
+
+.category-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, opacity 0.5s ease;
+}
+
+.category-image:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.category-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #004d40;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.category-title::after {
+  content: " →";
+  position: relative;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.category-title:hover {
+  color: #857700;
+  transform: scale(1.05);
+}
+
+.category-title:hover::after {
+  left: 6px;
+  opacity: 1;
+}
+
+.category-title:hover ~ .category-image {
+  transform: scale(1.08);
+  opacity: 1;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.category-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-title a:hover {
+  color: #857700;
+}
+
+.category-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  padding-bottom: 1rem;
+}
+
+.category-link {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+}
+
+.category-link:hover img {
+  transform: scale(1.05);
+  opacity: 0.95;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.image-credit {
+  display: block;
+  font-size: 0.7rem;
+  color: #666;
+  margin: 0.25rem 0 0.5rem 0;
+  text-align: right;
+  font-style: italic;
+}
+
+/* ------------ Back to Top Button -------------- */
+#back-to-top {
+    position: fixed;
+    bottom: 2rem; /* a bit more space from bottom */
+    right: 2rem;  /* a bit more space from right */
+    padding: 1rem 1.5rem; /* larger button */
+    font-size: 1.2rem;   
+    font-weight: 600;
+    background-color: #b8a600; /* brand accent color */
+    color: #004d40;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* hidden by default */
+    z-index: 2000;
+}
+
+/* Hover/focus effect – bigger pop */
+#back-to-top:hover,
+#back-to-top:focus {
+    background-color: #d2bd00;
+    transform: scale(1.15);
+    outline: none;
+}
+
+/* Show button when scrolled */
+#back-to-top.show {
+    opacity: 1;
+}
+
+
+
+/* ==================== MOBILE ADJUSTMENTS ==================== */
+/* I dette tilfælde fejlede jeg med mobile-først, da jeg var begyndt at kode, indtil det gik op for mig i timen, at vi skulle designe mtil mobil først */
+@media (max-width: 768px) {
+  .categories {
+    display: block;
+    gap: 0;
+    padding: 0;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .category {
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 1.5rem;
+  }
+}
+
+
+/* ==================== FOOTER ==================== */
+.site-footer {
+    background-color: #004d40;
+    color: #fff;
+    padding: 3rem 1.5rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Mobile-first layout: stacked */
+.footer-container {
+    display: flex;
+    flex-direction: column;  /* stack sections by default */
+    align-items: center;     /* center content */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-brand,
+.footer-contact {
+    flex: 1 1 100%;
+}
+
+.footer-logo {
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer contact email hover effect */
+.footer-contact a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* allows transform to work properly */
+}
+
+.footer-contact a:hover,
+.footer-contact a:focus {
+    color: #b8a600;        /* accent color */
+    transform: scale(1.05); /* subtle pop */
+}
+
+.social-icons a {
+    margin-right: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #b8a600;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.3);  /* Border-top i stedet for <hr> Nadia! */
+    padding-top: 1rem;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+/* ==================== DESKTOP STYLING (min-width: 769px) ==================== */
+@media (min-width: 769px) {
+    /* Footer layout: brand left, contact/social right */
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    /* Center the footer brand */
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Give more space above contact/social */
+    .footer-contact {
+        margin-top: 2rem; /* adjust as needed */
+        text-align: center;
+    }
+
+    .social-icons a {
+        margin-right: 0.75rem;
+    }
+}
+
+
+
+
+
+/* ================ UnderstandingMentalHealth.html og alle de html sider, der har accordions =============================*/ 
+
+
+/* -------- accordions -------- */ 
+
+.accordion-container { 
+  display: flex; 
+  flex-direction: column; /* stack on mobile */ 
+} 
+
+.category-exp { 
+  text-align: left; 
+  border-radius: 16px; 
+  padding: 2rem; 
+  position: relative; 
+  overflow: hidden; 
+} 
+
+.category-heading { 
+  font-size: 1.4rem; 
+  font-weight: 600; 
+  margin-top: 1rem; 
+  margin-bottom: 0.5rem; 
+  color: #004d40; 
+  position: relative; 
+  transition: transform 0.3s ease, color 0.3s ease; 
+  cursor: pointer; 
+  display: inline-block; 
+} 
+
+.category-heading::after { 
+  position: relative; 
+  left: 0; 
+  opacity: 0; 
+  transition: all 0.3s ease; 
+} 
+
+.category-heading:hover { 
+  color: #857700; 
+  transform: scale(1.05); 
+} 
+
+.category-heading:hover::after { 
+  left: 6px; 
+  opacity: 1; 
+} 
+
+.category-heading:hover ~ .category-image { 
+  transform: scale(1.08); 
+  opacity: 1; 
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12); 
+} 
+.category-heading a { 
+  text-decoration: none; 
+  color: inherit; 
+} 
+
+.category-heading a:hover { 
+  color: #857700; } .category-button { 
+  display: inline-block; 
+  margin-top: 1rem; 
+  margin-bottom: 2.5rem; 
+  padding: 0.6rem 1.2rem; 
+  background-color: #004d40; 
+  color: #fff; 
+  font-weight: 600; 
+  font-size: 1rem; 
+  text-decoration: none; 
+  border-radius: 0.5rem; 
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+  } 
+  
+  .category-button:hover, .category-button:focus { 
+  background-color: #857700; 
+  transform: scale(1.05); 
+  outline: none; 
+} 
+
+.accordion { 
+  width: 100%; 
+  background: none; 
+  border: none; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  cursor: pointer; 
+  padding: 0.75rem 0; 
+  color: #004d40; 
+  transition: color 0.3s ease; 
+} 
+
+.accordion:hover .category-title { 
+  color: #857700; } .arrow { 
+    font-size: 1.3rem; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+    color: #004d40; 
+  
+} 
+
+.accordion:hover .arrow { 
+  color: #857700; 
+} 
+
+/* Panel animation */ 
+
+.panel { 
+  max-height: 0; 
+  overflow: hidden; 
+  opacity: 0; 
+  transition: all 0.4s ease; 
+  padding-left: 1rem; 
+} 
+
+.accordion.active + .panel { 
+  max-height: none; 
+  opacity: 1; 
+  padding-top: 0.5rem; 
+} 
+
+.accordion.active .arrow { 
+  transform: rotate(90deg); 
+  color: #857700; 
+} 
+
+
+/* ========= Finding Help ============= */
+
+.category-text a {
+  color: #004d40;
+  font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(transparent 70%, #fff89a 70%);
+  padding: 0 0.15em;
+  border-radius: 0.15em;
+}
+
+.category-text a:hover,
+.category-text a:focus {
+  background: linear-gradient(transparent 60%, #ffe259 60%);
+  outline: none;
+}
+
+.crisis-section a {
+  color: #004d40;
+  text-decoration: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.crisis-section a:hover {
+  background-color: #fff176;
+  color: #000;
+  padding: 0 0.2em;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+/* ================== Wellness & Daily Life =================== */
+
+
+/* Grid layout, der har meget arbejde endnu */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  overflow-x: auto; /* ensure items never get clipped */
+}
+
+/* App card */
+.app-card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 16px;
+  padding: 1.4rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+/* Icon */
+.app-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+}
+
+/* Typography */
+.app-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #004d40;
+  margin-bottom: 0.3rem;
+}
+
+.app-desc {
+  font-size: 0.96rem;
+  line-height: 1.45;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* Store buttons */
+.store-buttons {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.store-buttons a {
+  display: inline-block;
+  overflow: visible; /* allow shadow to appear */
+}
+
+.store-buttons a img {
+  height: 40px;
+  width: auto;
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), 
+              box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.3s ease;
+  border-radius: 8px; /* optional, softens pop */
+}
+
+.store-buttons a:hover img {
+  transform: scale(1.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  opacity: 1;
+}
+
+
+
+/* =========== CONTACT PAGE =============== */
+
+
+/* --------------- CONTACT FORM -------------- */
+.contact-form {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #f5f5f5; /* 30% light-gray */
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form h2 {
+  color: #004d40; /* forest green */
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+#message {
+  resize: none; /* disables manual dragging within the browser :D */
+  overflow-y: hidden; /* hide vertical scrollbar initially */
+}
+
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #004d40;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem 1rem;
+  border: 2px solid #004d40;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  color: #004d40;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #857700; /* curry yellow */
+  box-shadow: 0 0 0 3px rgba(184, 166, 0, 0.3);
+  outline: none;
+}
+
+
+.form-group small {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #004d40;
+  text-align: right;
+}
+
+/* Checkbox styling */
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.form-group input[type="checkbox"] + label {
+  font-weight: normal;
+  display: inline;
+  color: #004d40;
+}
+
+.form-group.checkbox-group {
+  display: inline;
+  align-items: center; /* vertically center checkbox with label */
+  gap: 0.5rem;         /* space between checkbox and text */
+}
+
+
+/* Submit button */
+.category-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #004d40; /* forest green */
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: center;
+}
+
+.category-button:hover,
+.category-button:focus {
+  background-color: #857700; /* curry yellow */
+  transform: scale(1.05);
+  outline: none;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
+}

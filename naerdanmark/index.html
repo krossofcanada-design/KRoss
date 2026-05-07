@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NærDanmark</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    
+    <!--A link within html to google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
+
+    <!--A link within html to popular icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+
+</head>
+    <body>
+
+        <header class="top-nav">
+            <!-- venstre side af navigationen -->
+            <div class="nav-left">
+                <a href="index.html">
+                <img src="img/Topnav/TransparentLogo.png" alt="NærDanmark logo" class="logo">
+                </a>
+                <span class="company-name">NærDanmark</span>
+            </div>
+
+            <!-- højre side af navigationen -->
+            <div class="nav-right">                            
+                 <a href="Loginside.html">
+                    <img src="img/Topnav/bruger.png" alt="Login" class="icon login-icon">
+                </a>
+                <img src="img/Topnav/kurv.png" alt="Kurv" class="icon cart-icon">
+                <i class="fa-solid fa-heart heart"></i>
+                <i class="fa-solid fa-bars hamburger" id="hamburger"></i> <!-- jeg har tilføjet id i hamburgermenuen, fordi jeg har brug for at kalde på hamburgeren i js -->
+                
+            </div>
+  
+            <!-- Hidden menu -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <a href="index.html">Forside</a>
+                <a href="OmOs.html">Om os</a>
+                <a href="#">Skjulte Perler</a>
+                <a href="#">Lokale Smagsoplevelser</a>
+                <a href="NaturOgFriluftsliv.html">Natur & Friluftsliv</a>
+                <a href="#">Kultur & Historie</a>
+                <a href="#">Kunst & Musik</a>
+                <a href="#">Når det regner og blæser</a>
+                <a href="#">Workshops & Velvære</a>
+                <a href="#">Grønne Overnatningssteder</a>
+                <a href="Loginside.html">Login</a>
+            </nav>
+        </header>
+    
+    
+        <main>
+            <!-- Responsive text box / intro -->
+            <p class="box bg-text">
+                Nyd det nære, oplev det store. <br> 
+                Grønne oplevelser, tæt på dig 
+            </p>
+
+            <div class="box bg-img">
+                <div class="box-overlay-text">
+                <h2>Gå på opdagelse i efterårets skjulte perler</h2>
+                <p>Efteråret er tiden for gyldne farver, kølige lufteture og hyggelige stunder indenfor. Lad dig inspirere af sæsonens stemning, mærk naturens forandring og find ro, inspiration og små oplevelser i nærmiljøet.</p>
+                </div>
+            </div>
+            
+             
+             <!-- Search Bar -->
+            <div class="search-container">
+                <i class="fas fa-calendar-alt calendar-icon" id="calendarIcon"></i>
+                <input type="text" id="searchInput" placeholder="Find dit næste eventyr..."/>
+                <i class="fas fa-search search-icon"></i>
+                <input type="date" id="calendarPicker"/>
+            </div>
+
+            <div class="event-grid">
+
+                <!-- Kategori 1 , jeg downloadede et billede og satte det ind i img mappen. Jeg skrev selv i p afsnittet-->
+                <a href="https://example.com/event1" class="event-card">
+                    <img src="img/Kategorier/SkjultePerler.png" alt="Event 1">
+                    <p>Skjulte Perler</p>
+                </a>
+
+                <!-- Kategori 2 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <img src="img/Kategorier/LokaleSmagsoplevelser.png" alt="Event 2">
+                    <p>Lokale Smagsoplevelser</p>
+                </a>
+
+                <!-- Kategori 3 -->
+               <a href="NaturOgFriluftsliv.html" class="event-card">
+                    <img src="img/Kategorier/naturogfriluftsliv.png" alt="Event 3">
+                    <p>Natur & Friluftsliv</p>
+               </a>
+
+                <!-- Kategori 4 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <img src="img/Kategorier/kulturoghistorie.jpg" alt="Event 4">
+                    <p>Kultur & Historie</p>
+                </a>
+
+                <!-- Kategori 5 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <img src="img/Kategorier/KunstOgMusik.png" alt="Event 5">
+                    <p>Kunst & Musik</p>
+                </a>
+
+                <!-- Kategori 6 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <img src="img/Kategorier/NaarDetRegnerOgBlaeser.jpg" alt="Event 6">
+                    <p>Når det regner og blæser</p>
+                </a>
+                
+                <!-- Kategori 7 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <img src="img/Kategorier/WorkshopsOgVelvaere.png" alt="Event 5">
+                    <p>Workshops & Velvære</p>
+                </a>
+
+                <!-- Kategori 8 -->
+                <a href="https://example.com/event1" class="event-card">
+                    <img src="img/Kategorier/GroenneOvernatningssteder.jpg" alt="Event 6">
+                    <p>Grønne Overnatningssteder</p>
+                </a>
+
+                </div>
+
+            <div class="after-event-cards">
+                <p>Ønsker du at finde flere oplevelser? <br>
+                   Tryk på menuen og gå på opdagelse 
+                <img src="img/Pil.png" alt="More adventures" class="inline-icon">
+                </p>
+            </div>
+        </main>
+    
+
+        <footer>
+
+            <div class="footer-section">
+                <h3>Kontakt os:</h3>
+                <p>
+                NærDanmark<br>
+                Krovej 123,<br>
+                9999 Hyggehavn
+                </p>
+                <p>
+                Telefon: +45 88 88 88 00<br>
+                Mail: <a href="mailto:info@naerdanmark.dk">info@naerdanmark.dk</a>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Tilmeld nyhedsbrev</h3>
+                <form>
+                <input type="email" placeholder="Din email">
+                <button type="submit">Tilmeld</button>
+                </form>
+
+                <h3>Følg os:</h3>
+                <div class="social-icons">
+                <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                </div>
+
+                <ul>
+                <li><a href="#">Handelsbetingelser</a></li>
+                <li><a href="#">Privatlivspolitik</a></li>
+                </ul>
+            </div>
+
+            <!-- Bottom Navbar -->
+            <nav class="bottom-nav">
+                <a href="#" class="nav-item">
+                    <img src="img/bottomnav/ForaarIkon.png" alt="Forår">
+                    <span>Forår</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="img/bottomnav/SommerIkon.png" alt="Sommer">
+                    <span>Sommer</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="img/bottomnav/EfteraarsIkon.png" alt="Efterår">
+                    <span>Efterår</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="img/bottomnav/VinterIkon.png" alt="Vinter">
+                    <span>Vinter</span>
+                </a>
+            </nav>
+        </footer>
+
+<!-- Here's the part that connects to the JavaScript file. It's in the end, because Js grabs things "above" it -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="da"> <!-- language selelct -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rosmarin Shampoo Bar – Forebygger hårtab | Kystnær</title> <!-- Remember the title, it's important for SEO -->
+
+        <link rel="stylesheet" href="css/style.css"> <!-- Link to css file -->
+
+        
+        
+        <!-- Link to fontawesome, so we can use their icons -->
+        <script src="https://kit.fontawesome.com/aa47f20784.js" crossorigin="anonymous"></script>
+
+        <!-- Insert link to fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+        
+        <script src="js/script.js" defer></script> <!-- This is a newer method that helps run pages faster as js is loading at the same time. Putting the js link at the bottom of the body section was a popular option before, and is mainly used when js is more simple. -->
+
+    </head>
+
+    
+
+    <body>
+        <!-- HEADER -->
+        <header class="top-nav top-nav-haarpleje">
+
+            <!-- Left side of Navigation -->
+            <button class="hamburger-black" aria-label="Åbn menu">
+               <i class="fa-solid fa-bars"></i>
+            </button>
+
+
+            <a href="index.html" class="logo-name">
+                <img class="logo logo-aqua-general" src="img/LOGO AQUA.png" alt="Kystnær logo">
+                <span class="company-name-general">Kystnær</span>
+            </a>
+
+
+            <!-- Desktop menu (shown on desktop only) -->
+            <nav class="desktop-menu">
+            <ul class="desktop-menu-list">
+                <li class="desktop-menu-item" data-open="shop">Shop</li>
+                <li class="desktop-menu-item">Serier</li>
+                <li class="desktop-menu-item">Forkælelsespakker</li>
+                <li class="desktop-menu-item">Brands</li>
+                <li class="desktop-menu-item">Om Kystnær</li>
+                <li class="desktop-menu-item">Blog og guides</li>
+                <li class="desktop-menu-item">Kontakt</li>
+            </ul>
+            </nav>
+
+            <!-- Right side of Navigation -->
+            <div class="nav-right-black">
+                <div>
+                    <i class="fa-solid fa-bag-shopping" aria-label="Indkøbskurv"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass" aria-label="Søgefunktion"></i>
+                </div>
+            </div>
+
+
+            
+
+        </header>
+
+            <!-- MEGA-PANEL -->
+
+            <!-- MEGA PANEL OVERLAY -->
+            <div class="menu-overlay" tabindex="-1"></div>
+
+            <!-- MEGA PANEL ROOT -->
+            <nav class="menu-root" aria-hidden="true">
+
+                <!-- PANEL: MAIN -->
+                <section class="menu-panel" data-panel="main" role="dialog" aria-labelledby="menu-main-title">
+                  <h2 id="menu-main-title" class="visually-hidden">Main menu</h2> <!-- Dette blev tilføjet efter en fejl fra W3 Validator om manglende overskrift for skærmlæsere-->
+                    <button class="menu-close" aria-label="Luk menu">✕</button>
+
+                    <ul class="menu-list">
+                    <li>
+                        <button class="menu-item" data-open="shop">
+                        <span>Shop</span><span class="chevron">›</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="menu-item" data-open="construction">
+                        <span>Serier</span><span class="chevron">›</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="menu-item" data-open="construction">
+                        <span>Forkælelsespakker</span><span class="chevron">›</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="menu-item" data-open="construction">
+                        <span>Brands</span><span class="chevron">›</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="menu-item" data-open="construction">
+                        <span>Om Kystnær</span><span class="chevron">›</span>
+                        </button>
+                    </li>
+                    <li><a href="#">Blog og guides</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    </ul>
+                    <ul class="social-links">
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-pinterest-p"></i></li>
+                    <li><i class="fa-brands fa-tiktok"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                    </ul>
+                </section>
+
+                <!-- PANEL: SHOP -->
+                <section class="menu-panel" data-panel="shop" role="dialog" aria-labelledby="menu-shop-title">
+                    <button class="menu-close" aria-label="Luk menu">✕</button>
+
+                    <div class="menu-header">
+                    <button class="menu-back" data-back aria-label="Tilbage">
+                        ‹
+                    </button>
+                    <h2 id="menu-shop-title" class="menu-title">Shop</h2>
+                    </div>
+
+                    <ul class="menu-list">
+                      <li><button class="menu-item" data-open="construction"><span>Udvalgte</span><span class="chevron">›</span></button></li>
+                      <li><button class="menu-item" data-open="construction"><span>Hårpleje</span><span class="chevron">›</span></button></li>
+                      <li><button class="menu-item" data-open="construction"><span>Hudpleje</span><span class="chevron">›</span></button></li>
+                      <li><button class="menu-item" data-open="men"><span>Mænd</span><span class="chevron">›</span></button></li>
+                      <li><button class="menu-item" data-open="construction"><span>Tilbehør</span><span class="chevron">›</span></button></li>
+                      <li><button class="menu-item" data-open="construction"><span>Bolig og liv</span><span class="chevron">›</span></button></li>
+                    </ul>
+
+                    <img src="img/Neutralbalsamiskaal.webp"  class="menu-panel-img" alt="Neutral Balsam bar i skål">
+
+                    <a href="haarpleje.html" class="menu-cta">Se shop</a>
+                    
+                </section>
+
+                <!-- PANEL: MÆND -->
+                <section class="menu-panel" data-panel="men" role="dialog" aria-labelledby="menu-men-title">
+                    
+                    <div>
+                    <button class="menu-close" aria-label="Luk menu">✕</button>
+                    <img src="img/KystnaerShavingBarTangBarberingMandMaend1.webp" class="menu-panel-header-img" alt="Produkter til mænd">
+                    </div>
+
+                    <div class="menu-men">
+
+                    <div class="menu-header">
+                    <button class="menu-back" data-back aria-label="Tilbage">
+                        ‹
+                    </button>
+                    <h2 id="menu-men-title" class="menu-title">Mænd</h2>
+                    </div>
+
+                    <ul class="menu-list">
+                        <li><a href="haarpleje.html">Hårpleje</a><span class="chevron">›</span></li>
+                        <li><a href="#">Barbering</a><span class="chevron">›</span></li>
+                        <li><a href="#">Hudpleje</a><span class="chevron">›</span></li>
+                        <li><a href="#">Tilbehør</a><span class="chevron">›</span></li>
+                    </ul>
+
+                    <a href="index.html" class="menu-cta">Se Mænd</a>
+
+                    <h2>Bestsellers hos mænd</h2>
+
+                    <div class="menu-slider" aria-label="Udvalgte produkter">
+                        <a href="rosmarin.html"><img src="img/RosmarinShampoo.webp" alt="Rosmarin Shampoo Bar, styrker hårvækst">Rosmarin Shampoo Bar - Styrker hårvækst</a>
+                        <span><img src="img/rosmaringbalsam.webp" alt="Rosmarin Balsam Bar, styrker hårvækst">Rosmarin Balsam Bar - Styrker hårvækst</span>
+                        <span><img src="img/ShavingBar.webp" alt="Tang Shaving Bar, Beroligende og antibakteriel">Tang Shaving Bar - Beroligende og antibakteriel</span>
+                        <span><img src="img/aktivtkulshampoo.webp" alt="Aktivt Kul Shampoo, Mod skæl og irriteret hovedbund">Aktivt Kul Shampoo - Mod skæl og irriteret hovedbund</span>
+                    </div>
+                    </div>
+                </section>
+
+            </nav>
+ 
+        <main>
+            <section class="product-page">
+
+                <!-- LEFT: Product Gallery -->
+                <div class="product-gallery">
+                  <div class="product-main">
+                    <img id="mainImage" src="img/KystnaerShampooBarRosmarinHarvaekst_Glansogpleje3.webp" alt="Rosmarin Shampoo Bar, Forebyggende mod hårtab">
+                  </div>
+
+                  <div class="product-thumbs">
+                    <button class="thumb active">
+                      <img src="img/KystnaerShampooBarRosmarinHarvaekst_Glansogpleje3.webp" alt="Rosmarin Shampoo Bar, Forebyggende mod hårtab">
+                    </button>
+                    <button type="button" class="thumb">
+                      <img src="img/RosmarinShampoo.webp" alt="Rosmarin Shampoo Bar, Forebyggende mod hårtab">
+                    </button>
+                    <button class="thumb">
+                      <img src="img/rosmarinbarhaender.png" alt="osmarin Shampoo Bar, Forebyggende mod hårtab">
+                    </button>
+                    <button class="thumb">
+                      <img src="img/rosmarinshampoobar2.webp" alt="osmarin Shampoo Bar, Forebyggende mod hårtab">
+                    </button>
+                  </div>
+                </div>
+
+                        <!-- Kunne ikke få galleriet til at virke via extern js -->
+                        <script>
+                        document.addEventListener("DOMContentLoaded", () => {
+                          const mainImage = document.getElementById("mainImage");
+                          const thumbs = document.querySelectorAll(".thumb");
+
+                          thumbs.forEach(thumb => {
+                            thumb.addEventListener("click", () => {
+                              mainImage.src = thumb.querySelector("img").src;
+                              thumbs.forEach(t => t.classList.remove("active"));
+                              thumb.classList.add("active");
+                              thumb.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+
+                            });
+                          });
+                        });
+                        </script>
+
+
+                <!-- RIGHT: Product Info -->
+                <section class="right-column" > 
+                  <div class="product-info">
+                      
+                        <h1>Rosmarin Shampoo Bar</h1>
+
+                        <p class="description">
+                          Forebyggende mod hårtab - <a href="" class="btn-product">Lær mere</a>
+                        </p>
+                        <p class="price">140,00 kr</p>
+                        <p class="moms">
+                          Inklusiv moms · <strong>Fragtgebyr</strong> udregnes ved betaling
+                        </p>
+
+                        <div class="stock-indicator">
+                          <span class="stock-dot" aria-hidden="true"></span>
+                          <span class="stock-text">På lager</span>
+                        </div>
+
+                        <p class="price">Antal</p>
+
+                        <div class="quantity-selector">
+                          <button type="button" class="qty-btn" id="decrease">-</button>
+                          <input type="number" id="quantity" value="1" min="1">
+                          <button type="button" class="qty-btn" id="increase">+</button>
+                        </div>
+
+                      <div class="align">
+                        <button class="btn-product-primary">Tilføj til kurven</button>
+                        <button class="btn-product-secondary">Køb nu</button>
+                      </div>
+                      <div class="truck" >
+                        <i class="fa-regular fa-truck"></i>
+                        <p>Fri Fragt ved køb over <strong>499 kr</strong></p>
+                      </div>
+                  </div>
+              
+
+                    <section class="product-details">
+                        <h2>Støtte til hårvækst og en balanceret hovedbund</h2>
+                        <p>Oplever du begyndende hårtab, tyndere hår eller en hovedbund i ubalance? Rosmarin Shampoo Bar er udviklet til dig, der vil gøre noget aktivt for dit hår 
+                        — uden medicinske produkter eller komplicerede rutiner.</p> 
+                        <p>
+                        Rosmarinolie er kendt for at stimulere blodcirkulationen i hovedbunden og støtte hårsækkene — en vigtig faktor, når håret mister sin styrke eller tæthed. Studier har vist, at rosmarinolie kan give øget hårvækst over tid, når det bruges regelmæssigt. 
+                        </p>
+                        <p>
+                        Shampoo Baren renser effektivt uden at udtørre og efterlader håret rent, let og velplejet med en frisk, maskulin duft af rosmarin og mynte.</p>
+
+                        <img src="img/rosogaktkulivand.png" alt="Rosmarin og Aktivt Kul Shampoo barer i naturen">
+
+                            <h2>Derfor vælger mænd Rosmarin Shampoo Bar</h2>
+                            <li>Understøtter hårvækst ved at stimulere hovedbundens blodcirkulation.</li>
+                        <li>Hjælper med at styrke håret og mindske knækkede hårstrå.</li>
+                        <li>Skaber balance i hovedbunden og reducerer irritation.</li>
+                        <li>Frisk og ren duft af rosmarin og mynte.</li>
+                        <li>Fast shampoo — nem i brug og ideel til både hverdag og på farten. </li>
+
+                    </section>
+
+                    <section class="accordion" aria-label="Produktinformation Accordion">
+
+                      <div class="accordion-item">
+                        <h2>
+                          <button aria-expanded="false" aria-controls="anvendelse-content" id="anvendelse-btn">
+                            Anvendelse
+                            <span class="icon" aria-hidden="true">+</span>
+                          </button>
+                        </h2>
+                        <div id="anvendelse-content" role="region" aria-labelledby="anvendelse-btn" hidden>
+                          <p>Her kan du skrive indholdet om anvendelse af produktet.</p>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2>
+                          <button aria-expanded="false" aria-controls="emballage-content" id="emballage-btn">
+                            Emballage
+                            <span class="icon" aria-hidden="true">+</span>
+                          </button>
+                        </h2>
+                        <div id="emballage-content" role="region" aria-labelledby="emballage-btn" hidden>
+                          <p>Her kan du skrive indholdet om emballage.</p>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2>
+                          <button aria-expanded="false" aria-controls="nogleingredienser-content" id="nogleingredienser-btn">
+                            Nøgleingredienser
+                            <span class="icon" aria-hidden="true">+</span>
+                          </button>
+                        </h2>
+                        <div id="nogleingredienser-content" role="region" aria-labelledby="nogleingredienser-btn" hidden>
+                          <p>Her kan du skrive indholdet om nøgleingredienser.</p>
+                        </div>
+                      </div>
+
+                      <div class="accordion-item">
+                        <h2>
+                          <button aria-expanded="false" aria-controls="ingredienser-content" id="ingredienser-btn">
+                            Ingredienser
+                            <span class="icon" aria-hidden="true">+</span>
+                          </button>
+                        </h2>
+                        <div id="ingredienser-content" role="region" aria-labelledby="ingredienser-btn" hidden>
+                          <p>Her kan du skrive indholdet om ingredienser.</p>
+                        </div>
+                      </div>
+
+                  </section>
+
+                  <section class="often-bought">
+                    <h3>Ofte købt med</h3>
+                    <div class="inline" >
+                    <div class="product-item" tabindex="0">
+
+                      <img src="img/rosmaringbalsam.webp" alt="Rosmarin balsam bar, styrker hårvækst">
+                      <p>Rosmarin Balsam Bar</p>
+                      <p class="buy-link">Køb her</p>
+                    </div>
+
+                    <div class="product-item" tabindex="0">
+                      <img src="img/KystnaerSaebeBarTangTorhud_modenhudogrynker4.webp" alt="Tang sæbebar til tør hud">
+                      <p>Tang Sæbe Bar</p>
+                      <p class="buy-link">Køb her</p>
+                    </div>
+                    </div>
+                  </section>
+
+
+
+                                  </section>
+                              </section>
+
+                              <section class="product-flex">
+                    <h2>Blog posts</h2>
+
+                    <div class="flex-row">
+                      <div class="flex-item">
+                        <a href="rosmarin.html" class="flex-link">
+                          <div class="grid-media">
+                            <img
+                              class="grid-img"
+                              src="img/rosmaring blog.png"
+                              alt="Billede til blogindlæg om Rosmarin Shampoo og Balsam bar, der styrker hårvækst">
+                          </div>
+                          <div class="flex-label">
+                            <h3>Hvad rosmarin betyder for hovedbund og hårtab</h3>
+                            <p>Begyndende hårtab kan føles bekymrende – find ud af hvordan rosmarin kan være en skånsom, naturlig støtte til både hår og hovedbund.</p>
+                            <a href="">Læs mere</a>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="flex-item">
+                        <a href="" class="flex-link">
+                          <div class="grid-media">
+                            <img
+                              class="grid-img"
+                              src="img/aktivtkulmand.png"
+                              alt="Rosmarin Balsam Bar">
+                          </div>
+                          <div class="flex-label">
+                            <h3>Ansigtsrens med Aktivt kul</h3>
+                            <p>Synligt renere hud — Nem at anvende. Fra uren hud til selvtillid — Læs om Phillips oplevelse med Aktivt kul Ansigtsrens.</p>
+                            <a href="">Læs mere</a>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                  </section>
+
+
+
+
+
+            <!-- Nyhedsbrev -->
+            <section class="newsletter">
+                <div class="newsletter-content">
+
+                    <div class="newsletter-text">
+                    <h2>Tilmeld dig vores nyhedsbrev og få 10% rabat på dit første køb</h2>
+                    <p>Vær den første til at modtage tilbud, nyheder og tips til hud- og hårpleje</p>
+                    </div>
+
+                    <form class="newsletter-form" action="#" method="post">
+                    <input type="email" name="email" placeholder="Din email" required>
+                    <button type="submit">Tilmeld</button>
+                    </form>
+
+                </div>
+            </section>
+
+
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <div class="footer-container">
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                <h3>Kontakt</h3>
+                <h4>Kystnær</h4>
+                <p><a href="mailto:kontakt@kystnaer.com">kontakt@kystnaer.com</a></p>
+                <p>Ørbyhage 96<br>6100 Haderslev</p>
+                <p>Tlf: <a href="tel:+4571723191">+45 71 72 31 91</a></p>
+                </div>
+
+                <!-- About Column -->
+                <div class="footer-column">
+                <h3>Om Kystnær</h3>
+                <ul>
+                    <li><a href="#">Hvem er vi?</a></li>
+                    <li><a href="#">Find forhandlere</a></li>
+                    <li><a href="#">Bliv forhandler</a></li>
+                    <li><a href="#">B2B Login</a></li>
+                    <li><a href="#">Kontakt os</a></li>
+                </ul>
+                </div>
+
+                <!-- Information Column -->
+                <div class="footer-column">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">Returpolitik</a></li>
+                    <li><a href="#">Levering- og handelsbetingelser</a></li>
+                    <li><a href="#">Persondatapolitik</a></li>
+                    <li><a href="#">LAG og kommissionen</a></li>
+                </ul>
+                </div>
+
+                <!-- Social Column -->
+                <div class="footer-column">
+                <h3>Følg med</h3>
+                <ul class="social-links">
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-pinterest-p"></i></li>
+                    <li><i class="fa-brands fa-tiktok"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                </ul>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-left">
+                    <div>
+                    <p> 
+                        <select><option>Danmark (DKK kr.)</option></select>
+                    </p>
+                    </div>
+                    <div>
+                    <p> 
+                        <select><option>Dansk</option></select>
+                    </p>
+                    </div>
+                </div>
+
+                <div class="footer-right">
+                    <p>Drevet af Shopify</p>
+                    <p>© 2026, Kystnær</p>
+                </div>
+            </div>
+
+        </footer>
+      
+    </body>
+
+</html>
