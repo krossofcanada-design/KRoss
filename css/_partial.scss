@@ -1,12 +1,14 @@
 $prim-color: #DAD9E9;
 $sec-color: #003a56;
 $text-color: #001d2b;
+$line-color: #bfbaba;
 $font: 'be vietnam pro';
 
 
 @mixin shadows() {
     box-shadow: 
-    inset 10px 8px 20px rgba(255, 255, 255, 0.844),
+    inset 10px 8px 20px #ffffffd7,
     inset -10px -8px 20px #aaa9be,
-    30px 20px 20px #aaa9be;
+    10px 10px 30px 5px #aaa9be,
+    -10px -10px 30px #ffffffd7;
 }
