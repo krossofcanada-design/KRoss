@@ -15,17 +15,33 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #dad9e9e5;
+    background-color: #edecf7d2;
     box-shadow:
-    inset 0px -10px 30px #ffffff,
     0 8px 30px #aaa9be;
     z-index: 1001;
 
-    a {
-        font-size: 2.5rem;
-        padding: 20px 40px;
-        color: partial.$sec-color;
-        text-decoration: none;
+    .nav-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 20px;
+        gap: 10px;
+
+        img {
+            height: 100px;
+        }
+
+        a {
+            font-size: 2.5rem;
+            color: partial.$sec-color;
+            text-decoration: none;
+        }
+
+        :hover {
+                color: orange;
+                transition: .5s;
+            }
+}
     }
 
     i {
@@ -33,13 +49,14 @@ nav {
         font-size: 2.5rem;
         color: partial.$sec-color;
         
-    }
-
-    :hover {
+        &:hover {
                 color: orange;
                 transition: .5s;
             }
 }
+
+
+    
 
 
 
@@ -48,6 +65,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid partial.$line-color;
 
     h1 {
         padding-left: 100px;
@@ -62,31 +81,44 @@ nav {
     }
 }
 
-.projects {
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    justify-self: center;
-    gap: 70px;
 
+.portfolio {
+    padding-top: 30px;
 
-    a {
-        border-radius: 50px;
-        padding: 20px 30px;
-        text-decoration: none;
-        text-align: center;
-        font-size: 1.4rem;
+    h2 {
+        display: flex;
+        justify-content: center;
         color: partial.$sec-color;
-        
-        @include partial.shadows();
+        font-size: 2rem;
+        padding-bottom: 80px;
+    }
 
-        &:hover {
-            color: orange;
-            transition: .5s;
+    .projects {
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+        justify-self: center;
+        gap: 70px;
+        padding-bottom: 100px;
+
+
+        a {
+            border-radius: 50px;
+            padding: 20px 30px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.4rem;
+            color: partial.$sec-color;
             
+            @include partial.shadows();
+
+            &:hover {
+                color: orange;
+                transition: .5s;
+                
+            }
         }
     }
-}
 
-    
+} 
 
